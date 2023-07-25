@@ -13,7 +13,7 @@
     "test": "jest",
     "test:pkg:c-library:sass": "yarn pkg:c-library test-scss-compile",
     "test:ci": "jest --ci",
-    "compile": "tsc && yarn pkg:aio compile",
+    "compile": "tsc",
     "storybook": "storybook dev -p 6006 -c storybook",
     "storybook:preview": "NODE_ENV=production yarn storybook --docs",
     "storybook:clean": "rm -rf storybook/public",
