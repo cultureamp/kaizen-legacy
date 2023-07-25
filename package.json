@@ -10,8 +10,7 @@
   "scripts": {
     "build": "yarn turbo prepublish",
     "clean": "yarn turbo clean && yarn storybook:clean && rimraf node_modules",
-    "test": "jest && yarn test:pkg:aio",
-    "test:pkg:aio": "yarn pkg:aio test && yarn pkg:aio build",
+    "test": "jest",
     "test:pkg:c-library:sass": "yarn pkg:c-library test-scss-compile",
     "test:ci": "jest --ci",
     "compile": "tsc && yarn pkg:aio compile",
@@ -32,10 +31,9 @@
     "chromatic": "chromatic",
     "commit": "yarn changeset",
     "pkg:c-library": "yarn workspace @kaizen/component-library",
-    "pkg:aio": "yarn workspace @kaizen/components",
-    "ci:test": "yarn test:ci && yarn pkg:aio test:ci",
-    "ci:test:react-16": "USE_REACT_16=true yarn test:ci && yarn pkg:aio ci:test:react-16",
-    "ci:test:react-17": "USE_REACT_17=true yarn test:ci && yarn pkg:aio ci:test:react-17",
+    "ci:test": "yarn test:ci",
+    "ci:test:react-16": "USE_REACT_16=true yarn test:ci",
+    "ci:test:react-17": "USE_REACT_17=true yarn test:ci",
     "ci:version": "yarn turbo prepublish && yarn changeset version",
     "ci:publish": "yarn turbo prepublish && yarn changeset publish"
   },

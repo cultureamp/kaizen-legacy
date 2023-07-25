@@ -1,5 +1,0 @@
-{
-  "main": "../dist/cjs/future.js",
-  "module": "../dist/esm/future.js",
-  "types": "../dist/esm/dts/__future__/index.d.ts"
-}
