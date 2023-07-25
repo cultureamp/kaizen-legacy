@@ -1,0 +1,19 @@
+# Ignore by default
+*
+
+# Whitelist...
+!**/
+!*.ts
+!*.tsx
+!*.js
+!*.json
+!*.yaml
+!*.yml
+!*.scss
+!*.css
+
+# Explicitly ignore...
+**/node_modules/
+/storybook/public/
+/packages/**/dist
+/packages/components/locales

@@ -1,0 +1,67 @@
+name: ci
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+  # When Changesets opens a PR it does not trigger GitHub actions,
+  # because its token does not have permission to. This is a hack
+  # to allow one of us to trigger GitHub actions for a changesets PR
+  # by enabling automerge on the PR.
+  pull_request_target:
+    types:
+      - auto_merge_enabled
+    branches:
+      - master # the target branch of the PR
+    paths:
+      - "**/CHANGELOG.md" # only changesets releases touch changelogs
+
+jobs:
+  typescript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup
+      - run: yarn compile
+
+  eslint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup
+      - run: yarn lint:ts
+
+  prettier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup
+      - run: yarn lint:format
+
+  stylelint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup
+      - run: yarn lint:styles
+
+  jest-react-16:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup
+      - run: yarn ci:test:react-16
+
+  jest-react-17:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup
+      - run: yarn ci:test:react-17
