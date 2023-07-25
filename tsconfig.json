@@ -11,13 +11,7 @@
     "noImplicitReturns": true,
     "strict": true,
     "allowJs": false,
-    "noEmit": true,
-    "paths": {
-      "~types/*": ["packages/components/src/types/*"],
-      "~utils/*": ["packages/components/src/utils/*"],
-      "~components/*": ["packages/components/src/*"],
-      "~icons/*": ["packages/components/src/SVG/icons/*"]
-    }
+    "noEmit": true
   },
   "files": ["./types.d.ts"],
   "include": ["packages/**/*", "draft-packages/**/*", "storybook/**/*"],
