@@ -1,5 +1,32 @@
 # Change Log
 
+## 6.18.1
+
+### Patch Changes
+
+- [#3934](https://github.com/cultureamp/kaizen-design-system/pull/3934) [`32fc86349`](https://github.com/cultureamp/kaizen-design-system/commit/32fc86349f5228327da27766211ef172a86cc5e8) - Move `classNameOverride` to outer container of FilterMultiSelect removable trigger button.
+
+## 6.18.0
+
+### Minor Changes
+
+- [#3864](https://github.com/cultureamp/kaizen-design-system/pull/3864) [`8f3fa78e9`](https://github.com/cultureamp/kaizen-design-system/commit/8f3fa78e9e189c305e1cd400534393501d3c1724) - - adds sectionHeader prop to ListBoxSection
+  - provide a way to add headers that describe the ListBoxSection
+  - updates ListBoxSection semantic HTML
+    - this should address the issues with keyboard navigation and how the component is read to screen readers
+  - adds story to showcase use of new prop usage
+
+### Patch Changes
+
+- [#3815](https://github.com/cultureamp/kaizen-design-system/pull/3815) [`52e3d1f44`](https://github.com/cultureamp/kaizen-design-system/commit/52e3d1f441765f409ddb5c98dce1e407b707be0a) - Update dependencies
+  - update to prettier v3 cause minor linting changes
+  - update to prettier v3 required minor type fixes for format function in design-tokens
+- Updated dependencies [[`c8cf582b9`](https://github.com/cultureamp/kaizen-design-system/commit/c8cf582b99c7f9644bf73ef2902c49461f23dd7e), [`52e3d1f44`](https://github.com/cultureamp/kaizen-design-system/commit/52e3d1f441765f409ddb5c98dce1e407b707be0a)]:
+  - @kaizen/draft-tooltip@5.4.47
+  - @kaizen/component-library@16.9.3
+  - @kaizen/draft-badge@1.13.12
+  - @kaizen/draft-form@10.4.8
+
 ## 6.17.6
 
 ### Patch Changes

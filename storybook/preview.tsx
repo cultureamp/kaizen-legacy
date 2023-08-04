@@ -1,11 +1,8 @@
 import "./tailwind.scss"
 import React from "react"
 import { Preview } from "@storybook/react"
-import {
-  defaultTheme,
-  ThemeContext,
-  ThemeProvider,
-} from "@kaizen/design-tokens"
+import { defaultTheme, ThemeContext } from "@kaizen/design-tokens"
+import { KaizenProvider } from "~components/KaizenProvider"
 import { backgrounds } from "./backgrounds"
 import { DefaultDocsContainer } from "./components/DocsContainer"
 
@@ -38,9 +35,9 @@ const decorators = [
     const dir = props.args.textDirection ?? props.globals.textDirection
     return (
       <div dir={dir}>
-        <ThemeProvider>
+        <KaizenProvider>
           <Story {...props} />
-        </ThemeProvider>
+        </KaizenProvider>
       </div>
     )
   },
