@@ -1,6 +1,5 @@
 import React from "react"
 import { StoryFn } from "@storybook/react"
-import colorTokens from "@kaizen/design-tokens/tokens/color.json"
 import { LoadingSpinner } from "@kaizen/loading-spinner"
 
 export default {
@@ -25,7 +24,7 @@ export default {
  * When inside a button, it is intended to have the same color as the label text.
  */
 export const DefaultStory: StoryFn<typeof LoadingSpinner> = args => (
-  <div style={{ color: colorTokens.color.green["400"] }}>
+  <div className="text-green-400">
     <LoadingSpinner {...args} />
   </div>
 )

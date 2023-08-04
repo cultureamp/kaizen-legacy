@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { action } from "@storybook/addon-actions"
 import { StoryFn } from "@storybook/react"
+import Highlight from "react-highlight"
 import { Button } from "@kaizen/button"
 import { FieldMessageStatus } from "@kaizen/draft-form"
 import { Paragraph } from "@kaizen/typography"
 import { StickerSheet } from "../../../storybook/components/StickerSheet"
-import { CodeBlock } from "../../design-tokens/docs/DocsComponents"
 import { DatePicker } from "../src/DatePicker"
 import { ValidationResponse } from "../src/types"
 import { defaultMonthControls } from "./controls/defaultMonthControls"
@@ -175,10 +175,9 @@ export const ValidationStory: StoryFn = () => {
           <code>validationResponse</code> object which provides data such as a
           default validation message, and can be utilised for custom validation.
         </Paragraph>
-        <CodeBlock
-          language="json"
-          code={JSON.stringify(response, null, "\t")}
-        />
+        <Highlight className="json">
+          {JSON.stringify(response, null, 4)}
+        </Highlight>
         <ul>
           <li>
             <code>isInvalid</code>: A date that cannot be parsed. e.g

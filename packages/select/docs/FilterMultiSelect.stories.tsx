@@ -8,10 +8,10 @@ import {
   useQueryClient,
 } from "@tanstack/react-query"
 import isChromatic from "chromatic"
+import Highlight from "react-highlight"
 import { InlineNotification } from "@kaizen/notification"
 import { Label } from "../../../draft-packages/form"
 import { Button, ButtonRef } from "../../button"
-import { CodeBlock } from "../../design-tokens/docs/DocsComponents"
 import { Paragraph } from "../../typography"
 import { FilterMultiSelectProps } from "../src/FilterMultiSelect/components/Root"
 import { FilterMultiSelect, getSelectedOptionLabels } from ".."
@@ -98,7 +98,9 @@ export const DefaultKaizenSiteDemo: StoryFn<
       </FilterMultiSelect>
       <div style={{ marginTop: 4 }}>
         <Paragraph variant="body">Items: </Paragraph>{" "}
-        <CodeBlock language="json" code={JSON.stringify(mockItems, null, 2)} />
+        <Highlight className="json">
+          {JSON.stringify(mockItems, null, 2)}
+        </Highlight>
       </div>
     </>
   )
@@ -216,10 +218,9 @@ export const WithSections: StoryFn<typeof FilterMultiSelect> = () => {
       </FilterMultiSelect>
       <div style={{ marginTop: 4 }}>
         <Paragraph variant="body">Items: </Paragraph>
-        <CodeBlock
-          language="json"
-          code={JSON.stringify(mockItems, null, "\t")}
-        />
+        <Highlight className="json">
+          {JSON.stringify(mockItems, null, "\t")}
+        </Highlight>
       </div>
     </>
   )
@@ -354,10 +355,9 @@ export const FilterBarDemo = (): JSX.Element => {
 
       <Paragraph tag="div" variant="body">
         Selected Values:{" "}
-        <CodeBlock
-          language="json"
-          code={JSON.stringify(selectedDemographicValues, null, "\t")}
-        />
+        <Highlight className="json">
+          {JSON.stringify(selectedDemographicValues, null, "\t")}
+        </Highlight>
       </Paragraph>
     </>
   )
@@ -704,10 +704,9 @@ export const WithSectionHeader: StoryFn<typeof FilterMultiSelect> = () => {
       </FilterMultiSelect>
       <div style={{ marginTop: 4 }}>
         <Paragraph variant="body">Items: </Paragraph>
-        <CodeBlock
-          language="json"
-          code={JSON.stringify(mockItems, null, "\t")}
-        />
+        <Highlight className="json">
+          {JSON.stringify(mockItems, null, "\t")}
+        </Highlight>
       </div>
     </>
   )
