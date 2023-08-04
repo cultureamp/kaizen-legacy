@@ -89,7 +89,7 @@ To release a new version of a package, create a pull request that:
 
 Once that pull request is merged into main, a Changeset PR will automatically be created with the details of your change, and once the Changeset PR is merged, an automated release process will be triggered and the newly published package version will be available on the npm public registry.
 
-Note: This process is so we can roll more than one change in a single release eg. Person A adds Feature X to `@kaizen/components` and person B adds Feature Y to `@kaizen/components`, changesets will combine these into a single minor version, rather than 2.
+Note: This process is so we can roll more than one change in a single release eg. Person A adds Feature X to `@kaizen/button` and person B adds Feature Y to `@kaizen/button`, changesets will combine these into a single minor version, rather than 2.
 
 ### Semantic Versioning
 
