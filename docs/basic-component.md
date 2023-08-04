@@ -2,7 +2,6 @@
 
 Recipe for creating a basic component.
 
-- [Intro](#intro)
 - [Component structure](#component-structure)
   - [Subcomponents](#subcomponents)
   - [Hooks and Utils](#hooks-and-utils)
@@ -14,18 +13,6 @@ Recipe for creating a basic component.
   - [Props](#props)
   - [The component](#the-component)
   - [Display name](#display-name)
-
-## Intro
-
-To generate a new component and package, new component within an existing package, or a subcomponent,
-run the following command and follow the prompts:
-```
-yarn plop
-```
-or run the following command to answer the name prop (replace `NewComponentName` with your component name):
-```
-yarn plop NewComponentName
-```
 
 ## Component structure
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { Meta, StoryFn } from "@storybook/react"
-import { CodeBlock } from "../../../design-tokens/docs/DocsComponents"
+import Highlight from "react-highlight"
 import { Paragraph } from "../../../typography/src/Paragraph"
 import { Select } from "../../src/Select/Select"
 import { groupedMockItems, singleMockItems } from "../MockData"
@@ -56,10 +56,9 @@ export const WithSections: StoryFn<typeof Select> = () => (
     />
     <div style={{ marginTop: 4 }}>
       <Paragraph variant="body">Items: </Paragraph>
-      <CodeBlock
-        language="json"
-        code={JSON.stringify(groupedMockItems, null, 2)}
-      />
+      <Highlight className="json">
+        {JSON.stringify(groupedMockItems, null, 2)}
+      </Highlight>
     </div>
   </>
 )

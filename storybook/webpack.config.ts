@@ -37,7 +37,7 @@ export default ({ config }: { config: Configuration }): Configuration => {
     // redirected to import from the replacement path (Same as KAIO rollup config).
     "__@cultureamp/i18n-react-intl/locales": path.resolve(
       __dirname,
-      "../packages/components/locales"
+      "../node_modules/@kaizen/components/locales"
     ),
   }
 
