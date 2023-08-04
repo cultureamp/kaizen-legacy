@@ -3,6 +3,10 @@
 
 name: Run Storybook
 description: Start server and run Storybook for Storybook tests
+inputs:
+  artifactName:
+    required: true
+    description: Artifact name of the Storybook build
 
 runs:
   using: composite
@@ -11,7 +15,7 @@ runs:
       id: download
       uses: actions/download-artifact@v3
       with:
-        name: artifact--storybook-build
+        name: ${{ inputs.artifactName }}
     - name: Run storybook
       uses: Eun/http-server-action@v1
       with:
