@@ -1,8 +1,8 @@
 import "./tailwind.scss"
 import React from "react"
 import { Preview } from "@storybook/react"
+import { KaizenProvider } from "@kaizen/components"
 import { defaultTheme, ThemeContext } from "@kaizen/design-tokens"
-import { KaizenProvider } from "~components/KaizenProvider"
 import { backgrounds } from "./backgrounds"
 import { DefaultDocsContainer } from "./components/DocsContainer"
 

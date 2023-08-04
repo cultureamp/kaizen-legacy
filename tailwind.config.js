@@ -1,24 +1,12 @@
-// ts-check
-/** @type {import('tailwindcss').Config} */
-
 const { Preset } = require("@kaizen/tailwind")
 
 module.exports = {
+  // Glob pattern to match files containing TW classes. May be different for your project.
   content: ["./**/*.{ts,tsx,mdx}"],
+  // Override the default Tailwind preset with the Kaizen one.
   presets: [Preset],
-  // important to add to the #root and #docs-root (for storybook) to ensure that tailwind classes supersede component styles
-  important: ["#root", "#docs-root"],
-  theme: {
-    extend: {},
-  },
+  // Preflight is a heavy-handed css reset. We recommend disabling it in your project.
   corePlugins: {
     preflight: false,
   },
-  plugins: [],
-  safelist: [
-    {
-      pattern:
-        /(bg|border|rounded|shadow|h|w|m|p|font-family|font-weight|text|leading)-.*/,
-    },
-  ],
 }
