@@ -16,8 +16,9 @@ runs:
       uses: actions/download-artifact@v3
       with:
         name: ${{ inputs.artifactName }}
+        path: "./storybook/public"
     - name: Run storybook
       uses: Eun/http-server-action@v1
       with:
-        directory: ${{ steps.download.outputs.download-path }}
+        directory: "./storybook/public"
         port: 6006
