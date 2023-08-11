@@ -1,5 +1,22 @@
 # Change Log
 
+## 6.2.5
+
+### Patch Changes
+
+- [#3823](https://github.com/cultureamp/kaizen-design-system/pull/3823) [`f924fdeed`](https://github.com/cultureamp/kaizen-design-system/commit/f924fdeed3a83c46cb64ac880cbcc72b5bc6b5e8) - Update TimeField react-aria deps
+
+- [#3831](https://github.com/cultureamp/kaizen-design-system/pull/3831) [`5ad6c577c`](https://github.com/cultureamp/kaizen-design-system/commit/5ad6c577c7f2826ea7e285b0b8d1629643ce7b16) - Update `react-aria` dependencies.
+
+## 6.2.4
+
+### Patch Changes
+
+- [#3945](https://github.com/cultureamp/kaizen-design-system/pull/3945) [`60c405966`](https://github.com/cultureamp/kaizen-design-system/commit/60c405966d5e3fc8c8b57d51bf038490fd8594db) - Make id props optional, using uuid to generate one if not supplied
+
+- Updated dependencies [[`60c405966`](https://github.com/cultureamp/kaizen-design-system/commit/60c405966d5e3fc8c8b57d51bf038490fd8594db)]:
+  - @kaizen/draft-form@10.4.9
+
 ## 6.2.3
 
 ### Patch Changes

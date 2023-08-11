@@ -90,7 +90,6 @@ DefaultStory.parameters = {
   docs: { source: { type: "code" } },
 }
 DefaultStory.args = {
-  id: "datepicker-default",
   labelText: "Label",
   locale: "en-AU",
   onValidate: undefined,
@@ -137,7 +136,6 @@ export const ValidationStory: StoryFn = () => {
     <>
       <form onSubmit={submitRequest}>
         <DatePicker
-          id="datepicker-default"
           labelText="Label"
           selectedDay={selectedDate}
           onDayChange={setValueDate}
@@ -226,7 +224,6 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
         <StickerSheet.Body>
           <StickerSheet.Row style={{ verticalAlign: "top" }}>
             <DatePicker
-              id="datepicker-default"
               labelText="Label"
               selectedDay={selectedDate}
               onDayChange={setValueDate}
@@ -234,7 +231,6 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
               locale="en-AU"
             />
             <DatePicker
-              id="datepicker-selected"
               labelText="Label"
               selectedDay={new Date(2022, 1, 5)}
               onDayChange={(): void => undefined}
@@ -242,7 +238,6 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
               locale="en-AU"
             />
             <DatePicker
-              id="datepicker-description"
               labelText="Label"
               selectedDay={undefined}
               onDayChange={(): void => undefined}
@@ -261,7 +256,6 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
               locale="en-AU"
             />
             <DatePicker
-              id="datepicker-disabled"
               labelText="Label"
               selectedDay={undefined}
               onDayChange={(): void => undefined}
@@ -270,7 +264,6 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
               disabled
             />
             <DatePicker
-              id="datepicker-error"
               labelText="Label"
               selectedDay={new Date("potato")}
               onDayChange={(): void => undefined}
@@ -286,7 +279,6 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
         <StickerSheet.Body>
           <StickerSheet.Row>
             <DatePicker
-              id="datepicker-enAU"
               labelText="Label"
               selectedDay={new Date("2022, 1, 5")}
               onDayChange={(): void => undefined}
@@ -294,7 +286,6 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
               locale="en-AU"
             />
             <DatePicker
-              id="datepicker-enUS"
               labelText="Label"
               selectedDay={new Date("2022, 1, 5")}
               onDayChange={(): void => undefined}
