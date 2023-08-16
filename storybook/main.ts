@@ -49,6 +49,12 @@ const config = {
     name: "@storybook/react-webpack5",
     options: {},
   },
+  refs: {
+    new: {
+      title: "New components (React 18)",
+      url: "https://main--60a1e4a102f0cb003b5d19d6.chromatic.com/",
+    },
+  },
   typescript: {
     reactDocgen: "react-docgen-typescript",
     reactDocgenTypescriptOptions: {
