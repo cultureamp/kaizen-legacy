@@ -1,0 +1,25 @@
+import { Meta } from "@storybook/blocks"
+import { InlineNotification } from "@kaizen/notification"
+
+<Meta title="Introduction/READ ME" />
+
+# Kaizen Legacy
+
+<InlineNotification type="cautionary" persistent>
+  {`WARNING: Do NOT use for new projects. These components will no longer be maintained.`}
+</InlineNotification>
+
+## What do I do to move off Legacy?
+Kaizen is in the process of transitioning all these legacy components to a new architecture (All-in-One), but for now you can continue to use these until we release the alternatives.
+
+To see our progress, you can find them in the [kaizen-design-system](https://github.com/cultureamp/kaizen-design-system/) repo and see them in the main storybook: [https://cultureamp.design](https://cultureamp.design).
+
+## Why this repository exists
+To help projects continue to use components (post All-in-One release) that are tested in React 16 and 17 while they transition to React 18.
+
+See [Solution Preview](https://cultureamp.atlassian.net/wiki/spaces/DesignSystem/pages/3215819020/Solution+Preview+Ending+support+for+React+16+17+in+Kaizen) for more detail.
+
+## Contribution
+Please consider upgrading to use components in the [kaizen-design-system](https://github.com/cultureamp/kaizen-design-system/) repo **before** making any pull requests to this repo.
+
+We will only consider accepting changes to fix **critical** issues.
