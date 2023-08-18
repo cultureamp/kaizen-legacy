@@ -98,7 +98,7 @@ export const DefaultKaizenSiteDemo: StoryFn<
       </FilterMultiSelect>
       <div style={{ marginTop: 4 }}>
         <Paragraph variant="body">Items: </Paragraph>{" "}
-        <Highlight>{JSON.stringify(mockItems, null, 2)}</Highlight>
+        <Highlight>{JSON.stringify(mockItems, null, "\t")}</Highlight>
       </div>
     </>
   )
@@ -580,10 +580,9 @@ export const FilterBarDemo = (): JSX.Element => {
 
       <Paragraph tag="div" variant="body">
         Selected Values:{" "}
-        <Highlight
-          language="json"
-          code={JSON.stringify(selectedDemographicValues, null, "\t")}
-        />
+        <Highlight>
+          {JSON.stringify(selectedDemographicValues, null, "\t")}
+        </Highlight>
       </Paragraph>
     </>
   )
