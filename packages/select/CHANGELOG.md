@@ -1,5 +1,18 @@
 # Change Log
 
+## 6.19.0
+
+### Minor Changes
+
+- [#9](https://github.com/cultureamp/kaizen-legacy/pull/9) [`8ea613c`](https://github.com/cultureamp/kaizen-legacy/commit/8ea613cba997b1e85fcaa4ddc92656b9de3c1a48) - Update FilterMultiSelect ListBoxSection to avoid duplicate reading of sectionName as the accessible title.
+
+  - Update sectionName to be optional if sectionHeader is provided
+    - This will solve the issue of sectionName and sectionHeader being read twice when they are the same
+  - Minor style change to ensure hide bullet lists as filtering
+  - Minor style changes to allow for default text styles for section headings with just text
+  - Add conditional check to render the sectionName only if provided
+  - Add tests to validate type accessible names are constructed as expected
+
 ## 6.18.3
 
 ### Patch Changes
