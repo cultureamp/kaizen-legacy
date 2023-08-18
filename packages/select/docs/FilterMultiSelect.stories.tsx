@@ -144,6 +144,7 @@ export const WithSections: StoryFn<typeof FilterMultiSelect> = () => {
         selectedKeys={selectedKeys}
         items={mockItems}
         label="Engineer"
+        isOpen={IS_CHROMATIC || undefined}
         trigger={(): JSX.Element => (
           <FilterMultiSelect.TriggerButton
             selectedOptionLabels={getSelectedOptionLabels(
@@ -221,6 +222,9 @@ export const WithSections: StoryFn<typeof FilterMultiSelect> = () => {
     </>
   )
 }
+WithSections.parameters = {
+  chromatic: { disable: false },
+}
 
 export const WithSectionHeaders: StoryFn<typeof FilterMultiSelect> = () => {
   const [selectedKeys, setSelectedKeys] = useState<Selection>(
@@ -236,6 +240,7 @@ export const WithSectionHeaders: StoryFn<typeof FilterMultiSelect> = () => {
         selectedKeys={selectedKeys}
         items={mockItems}
         label="Engineer"
+        isOpen={IS_CHROMATIC || undefined}
         trigger={(): JSX.Element => (
           <FilterMultiSelect.TriggerButton
             selectedOptionLabels={getSelectedOptionLabels(
@@ -317,6 +322,9 @@ export const WithSectionHeaders: StoryFn<typeof FilterMultiSelect> = () => {
     </>
   )
 }
+WithSectionHeaders.parameters = {
+  chromatic: { disable: false },
+}
 
 export const WithSectionNotification: StoryFn<
   typeof FilterMultiSelect
@@ -334,6 +342,7 @@ export const WithSectionNotification: StoryFn<
         selectedKeys={selectedKeys}
         items={mockItems}
         label="Engineer"
+        isOpen={IS_CHROMATIC || undefined}
         trigger={(): JSX.Element => (
           <FilterMultiSelect.TriggerButton
             selectedOptionLabels={getSelectedOptionLabels(
@@ -437,6 +446,9 @@ export const WithSectionNotification: StoryFn<
       </div>
     </>
   )
+}
+WithSectionNotification.parameters = {
+  chromatic: { disable: false },
 }
 
 export const TruncatedLabels: StoryFn<typeof FilterMultiSelect> = () => {
