@@ -24,7 +24,7 @@ const meta = {
     },
     resourceLinks: {
       sourceCode:
-        "https://github.com/cultureamp/kaizen-design-system/tree/master/packages/select",
+        "https://github.com/cultureamp/kaizen-legacy/tree/main/packages/select",
     },
   },
 } satisfies Meta<typeof MenuLoadingSkeleton>
