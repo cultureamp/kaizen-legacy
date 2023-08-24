@@ -71,11 +71,11 @@ The base package.json will look like this, where:
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cultureamp/kaizen-design-system.git",
+    "url": "git+https://github.com/cultureamp/kaizen-legacy.git",
     "directory": "packages/{{ PACKAGE_NAME }}"
   },
   "bugs": {
-    "url": "https://github.com/cultureamp/kaizen-design-system/issues"
+    "url": "https://github.com/cultureamp/kaizen-legacy/issues"
   },
   "files": [
     "**/*",
