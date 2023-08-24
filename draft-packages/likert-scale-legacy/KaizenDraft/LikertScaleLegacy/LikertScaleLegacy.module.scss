@@ -33,39 +33,53 @@ $fifth: $color-red-500;
   -webkit-animation: pop cubic-bezier(0, 0.94, 0.32, 1) 0.7s 1;
 }
 
+@mixin right-likert-item($height) {
+  border-top-right-radius: $height;
+  border-bottom-right-radius: $height;
+}
+
+@mixin left-likert-item($height) {
+  border-top-left-radius: $height;
+  border-bottom-left-radius: $height;
+}
+
 @mixin fill($height) {
   &:first-child .likertItemFill {
-    border-top-left-radius: $height;
-    border-bottom-left-radius: $height;
+    @include left-likert-item($height);
 
     [dir="rtl"] & {
-      border-radius: $height 0;
+      border-radius: 0;
+
+      @include right-likert-item($height);
     }
 
     &::after {
-      border-top-left-radius: $height;
-      border-bottom-left-radius: $height;
+      @include left-likert-item($height);
 
       [dir="rtl"] & {
-        border-radius: $height 0;
+        border-radius: 0;
+
+        @include right-likert-item($height);
       }
     }
   }
 
   &:last-child .likertItemFill {
-    border-top-right-radius: $height;
-    border-bottom-right-radius: $height;
+    @include right-likert-item($height);
 
     [dir="rtl"] & {
-      border-radius: 0 $height;
+      border-radius: 0;
+
+      @include left-likert-item($height);
     }
 
     &::after {
-      border-top-right-radius: $height;
-      border-bottom-right-radius: $height;
+      @include right-likert-item($height);
 
       [dir="rtl"] & {
-        border-radius: 0 $height;
+        border-radius: 0;
+
+        @include left-likert-item($height);
       }
     }
   }
@@ -145,8 +159,13 @@ $fifth: $color-red-500;
 
   &[dir="rtl"],
   [dir="rtl"] & {
-    margin-right: 2px;
-    margin-left: 2px;
+    &:first-child {
+      margin-left: 2px;
+    }
+
+    &:last-child {
+      margin-right: 2px;
+    }
   }
 
   @include fill($block-height);
