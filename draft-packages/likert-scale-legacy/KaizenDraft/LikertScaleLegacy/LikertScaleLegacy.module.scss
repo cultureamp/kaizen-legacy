@@ -57,6 +57,8 @@ $fifth: $color-red-500;
       @include left-likert-item($height);
 
       [dir="rtl"] & {
+        border-radius: 0;
+
         @include right-likert-item($height);
       }
     }
@@ -75,6 +77,8 @@ $fifth: $color-red-500;
       @include right-likert-item($height);
 
       [dir="rtl"] & {
+        border-radius: 0;
+
         @include left-likert-item($height);
       }
     }
