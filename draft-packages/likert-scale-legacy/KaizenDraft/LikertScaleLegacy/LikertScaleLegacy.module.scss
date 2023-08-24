@@ -54,11 +54,9 @@ $fifth: $color-red-500;
     }
 
     &::after {
-      @include right-likert-item($height);
+      @include left-likert-item($height);
 
       [dir="rtl"] & {
-        border-radius: 0;
-
         @include right-likert-item($height);
       }
     }
@@ -74,11 +72,9 @@ $fifth: $color-red-500;
     }
 
     &::after {
-      @include left-likert-item($height);
+      @include right-likert-item($height);
 
       [dir="rtl"] & {
-        border-radius: 0;
-
         @include left-likert-item($height);
       }
     }
