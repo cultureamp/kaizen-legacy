@@ -1,6 +1,6 @@
 {
   "name": "@kaizen/draft-likert-scale-legacy",
-  "version": "1.10.58",
+  "version": "1.11.0",
   "description": "The draft likert-scale component",
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",
