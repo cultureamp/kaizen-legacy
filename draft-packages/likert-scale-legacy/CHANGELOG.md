@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.11.0
+
+### Minor Changes
+
+- [#12](https://github.com/cultureamp/kaizen-legacy/pull/12) [`86b4ad0`](https://github.com/cultureamp/kaizen-legacy/commit/86b4ad0df023d830c2d0636e003afd23fcef4b58) - Fix RTL styles like Likert Scale
+
 ## 1.10.58
 
 ### Patch Changes
