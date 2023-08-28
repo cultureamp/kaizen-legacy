@@ -1,20 +1,22 @@
 import React, { useEffect } from "react"
-import { describe, expect, it, jest } from "@jest/globals"
-import { act, configure, render, screen } from "@testing-library/react"
-import { EditorState, Transaction } from "prosemirror-state"
+import { configure, render } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
+import { Command, EditorState, Transaction } from "prosemirror-state"
 import { testEditorState } from "../fixtures/testState"
 import { useRichTextEditor } from "./useRichTextEditor"
 
+const user = userEvent.setup()
+
 configure({ testIdAttribute: "data-automation-id" })
 
-function Scenario({
-  onChange = (_: EditorState) => {},
+const Scenario = ({
+  onChange = (_: EditorState) => undefined,
   editable = true,
 }: {
   onChange?: (editorState: EditorState) => void
   editable?: boolean
-}) {
-  const command = (
+}): JSX.Element => {
+  const command: Command = (
     state: EditorState,
     dispatch?: (tx: Transaction) => void
   ) => {
@@ -40,6 +42,7 @@ function Scenario({
   return (
     <div>
       <button
+        type="button"
         onClick={() => {
           dispatchTransaction(command)
         }}
@@ -47,6 +50,7 @@ function Scenario({
         Prepend button
       </button>
       <button
+        type="button"
         onClick={() => {
           setEditableStatus(false)
         }}
@@ -54,6 +58,7 @@ function Scenario({
         Editable: false
       </button>
       <button
+        type="button"
         onClick={() => {
           setEditableStatus(true)
         }}
@@ -67,68 +72,59 @@ function Scenario({
 
 describe("useRichTextEditor", () => {
   it("binds the editor to the DOM", async () => {
-    render(<Scenario />)
+    const { findByText } = render(<Scenario />)
 
-    await screen.findByText("Example content")
+    expect(await findByText("Example content")).toBeInTheDocument()
   })
 
   it("updates the DOM when commands are dispatched", async () => {
-    render(<Scenario />)
+    const { findByText, getByRole } = render(<Scenario />)
 
-    await act(async () => {
-      await screen.findByText("Example content")
-    })
+    await findByText("Example content")
+    await user.click(getByRole("button", { name: "Prepend button" }))
 
-    const button = await screen.findByText("Prepend button")
-    button.click()
-
-    await screen.findByText("Prepended content. Example content")
+    expect(
+      await findByText("Prepended content. Example content")
+    ).toBeInTheDocument()
   })
 
   it("updates the editorState when commands are dispatched", async () => {
     const onChange = jest.fn()
-    render(<Scenario onChange={onChange} />)
+    const { findByText, getByRole } = render(<Scenario onChange={onChange} />)
 
-    await act(async () => {
-      await screen.findByText("Example content")
-    })
-
-    await act(async () => {
-      const button = await screen.findByText("Prepend button")
-      button.click()
-    })
+    await findByText("Example content")
+    await user.click(getByRole("button", { name: "Prepend button" }))
 
     const updatedEditorState = onChange.mock.calls[1][0] as EditorState
     expect(updatedEditorState.toJSON()).toMatchSnapshot()
   })
 
   it("defaults to editable", async () => {
-    render(<Scenario />)
+    const { findByTestId } = render(<Scenario />)
 
-    const editor = await screen.findByTestId("editor")
+    const editor = await findByTestId("editor")
     expect(editor.children[0]?.getAttribute("contenteditable")).toEqual("true")
   })
 
   it("respects initial editable status", async () => {
-    render(<Scenario editable={false} />)
+    const { findByTestId } = render(<Scenario editable={false} />)
 
-    const editor = await screen.findByTestId("editor")
+    const editor = await findByTestId("editor")
     expect(editor.children[0]?.getAttribute("contenteditable")).toEqual("false")
   })
 
   it("updates editable status", async () => {
-    render(<Scenario />)
+    const { findByTestId, getByRole } = render(<Scenario />)
 
-    const editor = await screen.findByTestId("editor")
+    const editor = await findByTestId("editor")
+
     expect(editor.children[0]?.getAttribute("contenteditable")).toEqual("true")
 
-    const disableEditButton = await screen.findByText("Editable: false")
-    disableEditButton.click()
+    await user.click(getByRole("button", { name: "Editable: false" }))
 
     expect(editor.children[0]?.getAttribute("contenteditable")).toBe("false")
 
-    const enableEditButton = await screen.findByText("Editable: true")
-    enableEditButton.click()
+    await user.click(getByRole("button", { name: "Editable: true" }))
 
     expect(editor.children[0]?.getAttribute("contenteditable")).toBe("true")
   })
