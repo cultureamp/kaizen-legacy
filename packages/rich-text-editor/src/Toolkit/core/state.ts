@@ -23,7 +23,7 @@ export function createEditorState(
  * Create a ProseMirror doc node from the combination of a schema and the object
  * representation of a document
  */
-export function createDocNode(schema: Schema, docObject: Doc) {
+export function createDocNode(schema: Schema, docObject: Doc): Node {
   return Node.fromJSON(schema, docObject)
 }
 
@@ -34,7 +34,7 @@ export function createDocNode(schema: Schema, docObject: Doc) {
 export function createDocNodeFromContent(
   schema: Schema,
   docContent: DocContent
-) {
+): Node {
   return createDocNode(schema, {
     type: "doc",
     content: docContent,

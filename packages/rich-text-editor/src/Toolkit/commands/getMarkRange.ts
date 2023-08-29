@@ -4,6 +4,8 @@ import { MarkRange } from "../core/types"
 // Note: this doesn't handle selections _across_ nodes.
 // At the time of writing the implication of this is on links: they cannot span across multiple nodes.
 // There's no impact on the other marks like bold, italics and underline.
+
+/**  Retrieve the `from` and `to` range of the given Mark  */
 export function getMarkRange(
   $pos: ResolvedPos | null = null,
   type: MarkType | null = null
@@ -18,8 +20,9 @@ export function getMarkRange(
     return null
   }
 
-  const mark = start.node.marks.find(mark => mark.type === type)
-  if (!mark) {
+  const matchedMark = start.node.marks.find(mark => mark.type === type)
+
+  if (!matchedMark) {
     return null
   }
 
@@ -30,7 +33,7 @@ export function getMarkRange(
 
   while (
     startIndex > 0 &&
-    mark.isInSet($pos.parent.child(startIndex - 1).marks)
+    matchedMark.isInSet($pos.parent.child(startIndex - 1).marks)
   ) {
     startIndex -= 1
     startPos -= $pos.parent.child(startIndex).nodeSize
@@ -38,7 +41,7 @@ export function getMarkRange(
 
   while (
     endIndex < $pos.parent.childCount &&
-    mark.isInSet($pos.parent.child(endIndex).marks)
+    matchedMark.isInSet($pos.parent.child(endIndex).marks)
   ) {
     endPos += $pos.parent.child(endIndex).nodeSize
     endIndex += 1

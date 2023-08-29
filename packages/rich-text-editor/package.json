@@ -49,7 +49,8 @@
     "prosemirror-schema-list": "^1.2.1",
     "prosemirror-state": "^1.4.1",
     "prosemirror-utils": "^1.0.0-0",
-    "prosemirror-view": "^1.27.2"
+    "prosemirror-view": "^1.27.2",
+    "prosemirror-transform": "^1.1.0"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.7",

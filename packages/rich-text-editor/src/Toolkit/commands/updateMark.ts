@@ -1,4 +1,4 @@
-import { MarkType } from "prosemirror-model"
+import { MarkType, Attrs } from "prosemirror-model"
 import { EditorState, Transaction } from "prosemirror-state"
 import { CommandFactory } from "../core/types"
 import { getMarkRange } from "./getMarkRange"
@@ -7,7 +7,7 @@ import { getMarkRange } from "./getMarkRange"
 export const updateMark: CommandFactory =
   (
     type: MarkType,
-    attrs: Object,
+    attrs: Attrs,
     options: {
       /** Apply the update to the entire mark even if the selection only partially contains the mark  */
       toExtent: boolean

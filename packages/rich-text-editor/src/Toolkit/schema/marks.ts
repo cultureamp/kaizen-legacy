@@ -53,7 +53,7 @@ function getAttributeWithDefault(
   node: HTMLElement,
   attributeName: string,
   defaultValue: unknown = null
-) {
+): string | null | unknown {
   const value = node.getAttribute(attributeName)
   return value && value !== "" ? value : defaultValue
 }

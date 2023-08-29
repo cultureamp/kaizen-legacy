@@ -1,4 +1,3 @@
-import { describe, expect, it, jest } from "@jest/globals"
 import { findByText, queryByText } from "@testing-library/dom"
 import { Command, EditorState, Transaction } from "prosemirror-state"
 import { createRichTextEditor } from "./create"
@@ -18,7 +17,7 @@ describe("createRichTextEditor", () => {
       initialEditorState: testEditorState,
     })
 
-    await findByText(node, "Example content")
+    expect(await findByText(node, "Example content")).toBeInTheDocument()
   })
 
   it("returns the expected API shape", async () => {
@@ -62,7 +61,7 @@ describe("createRichTextEditor", () => {
     const command = (
       state: EditorState,
       dispatch?: (tx: Transaction) => void
-    ) => {
+    ): ReturnType<Command> => {
       // Insert text at the current selection point, which is the start because
       // we don’t have a selection yet.
       if (!dispatch) return false
@@ -81,7 +80,9 @@ describe("createRichTextEditor", () => {
 
     dispatchTransaction(command)
 
-    await findByText(node, "Prepended content. Example content")
+    expect(
+      await findByText(node, "Prepended content. Example content")
+    ).toBeInTheDocument()
   })
 
   it("calls onChange when the editor state changes", async () => {
@@ -90,7 +91,7 @@ describe("createRichTextEditor", () => {
     const command = (
       state: EditorState,
       dispatch?: (tx: Transaction) => void
-    ) => {
+    ): ReturnType<Command> => {
       if (!dispatch) return false
       dispatch(state.tr.insertText("Prepended content. "))
       return true
@@ -116,7 +117,7 @@ describe("createRichTextEditor", () => {
     const command = (
       state: EditorState,
       dispatch?: (tx: Transaction) => void
-    ) => {
+    ): ReturnType<Command> => {
       if (!dispatch) return false
       dispatch(state.tr.insertText("Prepended content. "))
       return true
@@ -172,7 +173,7 @@ describe("createRichTextEditor", () => {
     const noopCommand = (
       state: EditorState,
       dispatch?: (tx: Transaction) => void
-    ) => {
+    ): ReturnType<Command> => {
       if (!dispatch) return false
       dispatch(state.tr)
       return true
@@ -201,7 +202,7 @@ describe("createRichTextEditor", () => {
     const noopCommand = (
       state: EditorState,
       dispatch?: (tx: Transaction) => void
-    ) => {
+    ): ReturnType<Command> => {
       if (!dispatch) return false
       dispatch(state.tr)
       return true

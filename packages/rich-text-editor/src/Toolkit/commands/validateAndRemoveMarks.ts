@@ -27,7 +27,7 @@ export function validateAndRemoveMarks(
     const to = state.doc.content.size
     const { tr } = state
 
-    const matched: Array<{
+    const matchedMarks: Array<{
       style: Mark
       from: number
       to: number
@@ -37,32 +37,41 @@ export function validateAndRemoveMarks(
     let step = 0
     tr.doc.nodesBetween(from, to, (node, pos) => {
       step++
-      let toRemove: Mark[] | null = null
-      const found = markType.isInSet(node.marks)
-      if (found && !validator(found.attrs)) {
-        toRemove = [found]
+      let marksToRemove: Mark[] | null = null
+      const foundMark = markType.isInSet(node.marks)
+      if (foundMark && !validator(foundMark.attrs)) {
+        marksToRemove = [foundMark]
       }
-      if (toRemove && toRemove.length) {
+      if (marksToRemove && marksToRemove.length) {
         const end = Math.min(pos + node.nodeSize, to)
-        for (let i = 0; i < toRemove.length; i++) {
-          const style = toRemove[i]
+
+        for (const markToRemove of marksToRemove) {
+          const style = markToRemove
           let found
-          for (let j = 0; j < matched.length; j++) {
-            const m = matched[j]
-            if (m.step === step - 1 && style.eq(matched[j].style)) {
-              found = m
+
+          for (const matchedMark of matchedMarks) {
+            if (matchedMark.step === step - 1 && style.eq(matchedMark.style)) {
+              found = matchedMark
             }
           }
+
           if (found) {
             found.to = end
             found.step = step
           } else {
-            matched.push({ style, from: Math.max(pos, from), to: end, step })
+            matchedMarks.push({
+              style,
+              from: Math.max(pos, from),
+              to: end,
+              step,
+            })
           }
         }
       }
     })
-    matched.forEach(m => tr.step(new RemoveMarkStep(m.from, m.to, m.style)))
+    matchedMarks.forEach(m =>
+      tr.step(new RemoveMarkStep(m.from, m.to, m.style))
+    )
     dispatch(tr)
     return true
   }

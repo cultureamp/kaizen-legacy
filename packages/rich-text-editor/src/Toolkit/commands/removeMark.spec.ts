@@ -1,4 +1,3 @@
-import { describe, expect, it, jest } from "@jest/globals"
 import { findByText, getByText, waitFor } from "@testing-library/dom"
 import { createRichTextEditor } from "../core/create"
 import { simulateSelectionByText } from "./fixtures/helpers"
@@ -57,7 +56,7 @@ describe("removeMark", () => {
       // Check that not all of the strong tag was removed
       expect(node.querySelectorAll("strong").length).toBe(currentStrongTags)
       // Check that the remaining node is is a strong tag
-      expect(strongTagRemainder.nodeName === "STRONG").toBe(true)
+      expect(strongTagRemainder.nodeName).toEqual("STRONG")
     })
   })
 

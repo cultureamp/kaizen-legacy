@@ -1,18 +1,15 @@
 import React, { useState, useEffect, HTMLAttributes, ReactNode } from "react"
 import classnames from "classnames"
+import { baseKeymap } from "prosemirror-commands"
+import { history } from "prosemirror-history"
+import { keymap } from "prosemirror-keymap"
+import { Schema, Node } from "prosemirror-model"
+import { EditorState, Plugin, Transaction } from "prosemirror-state"
 import { v4 } from "uuid"
 import { OverrideClassName } from "@kaizen/component-base"
 import { FieldMessage, Label } from "@kaizen/draft-form"
 import { InlineNotification } from "@kaizen/notification"
-import {
-  ProseMirrorCommands,
-  ProseMirrorState,
-  ProseMirrorModel,
-  ProseMirrorKeymap,
-  ProseMirrorHistory,
-  useRichTextEditor,
-  createLinkManager,
-} from "../Toolkit"
+import { useRichTextEditor, createLinkManager } from "../Toolkit"
 import { ToolbarItems, EditorContentArray, EditorRows } from "../types"
 import { buildControlMap } from "./controlmap"
 import { buildInputRules } from "./inputrules"
@@ -25,7 +22,7 @@ export interface BaseRichTextEditorProps
   extends OverrideClassName<
     Omit<HTMLAttributes<HTMLDivElement>, "onChange" | "content">
   > {
-  onChange: (content: ProseMirrorState.EditorState) => void
+  onChange: (content: EditorState) => void
   value: EditorContentArray
   controls?: ToolbarItems[]
   /**
@@ -77,9 +74,7 @@ export const RichTextEditor = (props: RichTextEditorProps): JSX.Element => {
     status = "default",
     ...restProps
   } = props
-  const [schema] = useState<ProseMirrorModel.Schema>(
-    createSchemaFromControls(controls)
-  )
+  const [schema] = useState<Schema>(createSchemaFromControls(controls))
   const [labelId] = useState<string>(labelledBy || v4())
   const [editorId] = useState<string>(v4())
 
@@ -88,8 +83,8 @@ export const RichTextEditor = (props: RichTextEditorProps): JSX.Element => {
     | Error => {
     try {
       return useRichTextEditor(
-        ProseMirrorState.EditorState.create({
-          doc: ProseMirrorModel.Node.fromJSON(schema, {
+        EditorState.create({
+          doc: Node.fromJSON(schema, {
             type: "doc",
             // we're converting empty arrays to the ProseMirror default "empty" state because when
             // given an empty array ProseMirror returns undefined, breaking the type
@@ -190,11 +185,11 @@ export const RichTextEditor = (props: RichTextEditorProps): JSX.Element => {
 
 function getPlugins(
   controls: ToolbarItems[] | undefined,
-  schema: ProseMirrorModel.Schema
+  schema: Schema
 ): Array<
-  | ProseMirrorState.Plugin<unknown>
-  | ProseMirrorState.Plugin<{
-      transform: ProseMirrorState.Transaction
+  | Plugin<unknown>
+  | Plugin<{
+      transform: Transaction
       from: number
       to: number
       text: string
@@ -204,9 +199,9 @@ function getPlugins(
     ? controls.reduce((acc: string[], c: ToolbarItems) => [...acc, c.name], [])
     : []
   const plugins = [
-    ProseMirrorHistory.history(),
-    ProseMirrorKeymap.keymap(buildKeymap(schema)),
-    ProseMirrorKeymap.keymap(ProseMirrorCommands.baseKeymap),
+    history(),
+    keymap(buildKeymap(schema)),
+    keymap(baseKeymap),
     buildInputRules(schema),
   ]
 

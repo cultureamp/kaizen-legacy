@@ -1,13 +1,10 @@
-import {
-  ProseMirrorModel,
-  nodes as coreNodes,
-  marks as coreMarks,
-} from "../Toolkit"
+import { NodeSpec, Schema } from "prosemirror-model"
+import { nodes as coreNodes, marks as coreMarks } from "../Toolkit"
 
 import { TOOLBAR_CONTROLS } from "../constants"
 import { ToolbarItems, ToolbarControlTypes } from "../types"
 
-export const defaultNodes: ProseMirrorModel.NodeSpec = {
+export const defaultNodes: NodeSpec = {
   doc: coreNodes.doc,
   paragraph: coreNodes.paragraph,
   text: coreNodes.text,
@@ -16,7 +13,7 @@ export const defaultNodes: ProseMirrorModel.NodeSpec = {
 
 export const createSchemaFromControls = (
   controls?: ToolbarItems[]
-): ProseMirrorModel.Schema<string> => {
+): Schema<string> => {
   if (!controls) {
     return createSchema()
   }
@@ -28,14 +25,12 @@ export const createSchemaFromControls = (
   return createSchema(namesFromControls)
 }
 
-export const createSchemaWithAll = (): ProseMirrorModel.Schema<string> =>
+export const createSchemaWithAll = (): Schema<string> =>
   createSchema(TOOLBAR_CONTROLS)
 
-function createSchema(
-  controls?: ToolbarControlTypes[]
-): ProseMirrorModel.Schema<string> {
+function createSchema(controls?: ToolbarControlTypes[]): Schema<string> {
   if (!controls) {
-    return new ProseMirrorModel.Schema({
+    return new Schema({
       nodes: defaultNodes,
     })
   }
@@ -69,7 +64,7 @@ function createSchema(
     newMarks["link"] = coreMarks.link
   }
 
-  return new ProseMirrorModel.Schema({
+  return new Schema({
     nodes: newNodes,
     marks: newMarks,
   })

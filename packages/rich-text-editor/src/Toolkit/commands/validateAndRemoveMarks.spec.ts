@@ -1,8 +1,6 @@
-import { describe, expect, it, jest } from "@jest/globals"
 import { findByText, waitFor } from "@testing-library/dom"
 import { createRichTextEditor } from "../core/create"
-import { testEditorStateWithMarks } from "./fixtures/test-state"
-import { testSchema } from "./fixtures/test-state"
+import { testEditorStateWithMarks, testSchema } from "./fixtures/test-state"
 import { validateAndRemoveMarks } from "./validateAndRemoveMarks"
 
 describe("validateAndRemoveMarks", () => {
@@ -18,7 +16,7 @@ describe("validateAndRemoveMarks", () => {
       initialEditorState: testEditorStateWithMarks,
     })
     // The current mockData will always return true so using the mock to represent bad attributes
-    const failingValidatorMethod = jest.fn().mockImplementation(attrs => false)
+    const failingValidatorMethod = jest.fn().mockImplementation(() => false)
 
     expect(node.querySelectorAll("a").length).toBeGreaterThan(0)
 

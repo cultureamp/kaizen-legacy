@@ -1,3 +1,4 @@
+import { Node } from "prosemirror-model"
 import {
   EditorState,
   Selection,
@@ -7,29 +8,38 @@ import {
 import { findChildrenByType } from "prosemirror-utils"
 
 /*
- ** This is used handle the JSDom type error issue you may encounter in testing
- ** See https://github.com/jsdom/jsdom/issues/3002
+  Note:
+  Due to how `testing-library` / `jsdom` interacts with the `contenteditable` attribute
+  several of these helpers have needed to be created in place of using click events (see: https://github.com/testing-library/user-event/issues/442)
+  These are not used anywhere side the test environment to simulate user reaction so hard effort have not been made for type safety
+*/
+
+/**
+ * This is used to handle the JSDom type error issue you may encounter in testing
+ * See https://github.com/jsdom/jsdom/issues/3002.
  */
+// eslint-disable-next-line
 export const mockRangeForBoundingRect = (document.createRange = () => {
   const range = new Range()
 
   range.getBoundingClientRect = () => ({
-      x: 0,
-      y: 0,
-      bottom: 0,
-      height: 0,
-      left: 0,
-      right: 0,
-      top: 0,
-      width: 0,
-      toJSON: () => {},
-    })
-
+    x: 0,
+    y: 0,
+    bottom: 0,
+    height: 0,
+    left: 0,
+    right: 0,
+    top: 0,
+    width: 0,
+    toJSON: () => ({}),
+  })
   range.getClientRects = () => ({
-      item: index => null,
-      length: 0,
-      *[Symbol.iterator]() {},
-    })
+    item: () => null,
+    length: 0,
+    *[Symbol.iterator]() {
+      return undefined
+    },
+  })
 
   return range
 })
@@ -56,7 +66,13 @@ export const simulateRangeSelection =
     return true
   }
 
-export const getStartNode = (state: EditorState) => {
+export const getStartNode = (
+  state: EditorState
+): {
+  node: Node | null
+  index: number
+  offset: number
+} => {
   const currentSelection: Selection = state.tr.selection
   const startNode = currentSelection.$from.parent.childAfter(
     currentSelection.$from.parentOffset
@@ -89,7 +105,13 @@ export const simulateSelectionOfCurrentElement =
     return true
   }
 
-const getNodeByText = (state: EditorState, selectedText: string) => {
+const getNodeByText = (
+  state: EditorState,
+  selectedText: string
+): {
+  node: Node
+  pos: number
+} => {
   let filteredNodes = findChildrenByType(
     state.doc,
     state.schema.nodes.text,

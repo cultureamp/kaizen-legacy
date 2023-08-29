@@ -18,8 +18,7 @@ import {
   LinkEditorProps,
 } from "./components/LinkEditor"
 import { createReactTooltipWrapper } from "./createReactTooltipWrapper"
-import { CAEditorView } from "./types.d"
-import { SelectionPosition } from "./types.d"
+import { CAEditorView, SelectionPosition } from "./types.d"
 
 class LinkManager {
   editorComponent: ComponentType<LinkEditorProps>
@@ -53,7 +52,7 @@ class LinkManager {
     }, 15)
   }
 
-  update(view: CAEditorView, lastState: EditorState | null) {
+  update(view: CAEditorView, lastState: EditorState | null): void {
     const { state } = view
 
     // Don’t do anything if the document/TextSelection didn't change
@@ -82,12 +81,12 @@ class LinkManager {
     this.updateElement(view)
   }
 
-  destroy() {
+  destroy(): void {
     this.tooltipTarget?.destroy()
     window.removeEventListener("resize", this.onResize)
   }
 
-  createElement(view: CAEditorView) {
+  createElement(view: CAEditorView): void {
     if (!view.dom.parentElement) return
     this.tooltipTarget = createReactTooltipWrapper(
       view.dom.parentElement,
@@ -97,11 +96,11 @@ class LinkManager {
     window.addEventListener("resize", this.onResize)
   }
 
-  updateElement(view: CAEditorView) {
+  updateElement(view: CAEditorView): void {
     this.tooltipTarget?.update(this.getEditorProps(view))
   }
 
-  destroyElement(view: CAEditorView) {
+  destroyElement(view: CAEditorView): void {
     view.dispatch(this.validateLinks)
     this.tooltipTarget?.destroy()
     this.tooltipTarget = null
@@ -165,7 +164,7 @@ export function createLinkManager({
     }
     return attrs.href && attrs.href !== ""
   },
-}: CreateLinkManagerArgs) {
+}: CreateLinkManagerArgs): Plugin<any> {
   return new Plugin({
     view(editorView) {
       return new LinkManager(

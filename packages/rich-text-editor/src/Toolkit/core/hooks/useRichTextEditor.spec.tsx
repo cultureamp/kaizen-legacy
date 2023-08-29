@@ -19,7 +19,7 @@ const Scenario = ({
   const command: Command = (
     state: EditorState,
     dispatch?: (tx: Transaction) => void
-  ) => {
+  ): ReturnType<Command> => {
     // Insert text at the current selection point, which is the start because
     // we don’t have a selection yet.
     if (!dispatch) return false
