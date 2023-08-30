@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from "react"
-import { SelectionPosition } from "../../types.d"
+import { SelectionPosition } from "../../types"
 import { LinkModal } from "../LinkModal"
 import { LinkPopover } from "../LinkPopover"
 

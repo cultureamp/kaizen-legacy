@@ -18,7 +18,7 @@ import {
   LinkEditorProps,
 } from "./components/LinkEditor"
 import { createReactTooltipWrapper } from "./createReactTooltipWrapper"
-import { CAEditorView, SelectionPosition } from "./types.d"
+import { CAEditorView, SelectionPosition } from "./types"
 
 class LinkManager {
   editorComponent: ComponentType<LinkEditorProps>

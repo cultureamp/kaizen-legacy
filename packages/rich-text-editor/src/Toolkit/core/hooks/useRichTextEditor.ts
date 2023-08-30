@@ -13,7 +13,7 @@ type UseRichTextEditorReturnValue = [
   any,
   EditorState,
   (commandOrTransaction: CommandOrTransaction) => void,
-  SetEditableStatus
+  SetEditableStatus,
 ]
 
 /**
@@ -91,11 +91,14 @@ export function useRichTextEditor(
   )
 
   // Tear down ProseMirror when the consuming component is unmounted
-  useEffect(() => () => {
+  useEffect(
+    () => () => {
       if (destroyEditorRef.current) {
         destroyEditorRef.current()
       }
-    }, [destroyEditorRef])
+    },
+    [destroyEditorRef]
+  )
 
   return [editorRef, editorState, dispatchTransaction, setEditableStatus]
 }
