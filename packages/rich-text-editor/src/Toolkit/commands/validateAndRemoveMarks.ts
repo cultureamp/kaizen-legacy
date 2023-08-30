@@ -1,4 +1,4 @@
-import { Mark, MarkType } from "prosemirror-model"
+import { Mark, MarkType, Node } from "prosemirror-model"
 import { EditorState, Transaction } from "prosemirror-state"
 import { RemoveMarkStep } from "prosemirror-transform"
 
@@ -13,6 +13,26 @@ export type AttrsValidator = (
   }
 ) => boolean | unknown
 
+type MatchedMarks = Array<{
+  style: Mark
+  from: number
+  to: number
+  step: number
+}>
+
+/** Validate the given mark type against the selected nodes */
+const getValidatedMarks = (
+  node: Node,
+  markType: MarkType,
+  validator: AttrsValidator
+): Mark[] | null => {
+  const validatedMark: Mark | undefined = markType.isInSet(node.marks)
+  if (validatedMark && !validator(validatedMark.attrs)) {
+    return [validatedMark]
+  }
+  return null
+}
+
 // This is a variation on the removeMark transform in
 // https://github.com/ProseMirror/prosemirror-transform/blob/master/src/mark.js#L44
 /** This will walk the full doc and remove the Marks that fail the validator method */
@@ -22,35 +42,25 @@ export function validateAndRemoveMarks(
 ) {
   return (state: EditorState, dispatch?: (tx: Transaction) => void) => {
     if (!dispatch) return false
-
-    const from = 0
-    const to = state.doc.content.size
+    const from: number = 0
+    const to: number = state.doc.content.size
     const { tr } = state
-
-    const matchedMarks: Array<{
-      style: Mark
-      from: number
-      to: number
-      step: number
-    }> = []
+    const matchedMarks: MatchedMarks = []
 
     let step = 0
     tr.doc.nodesBetween(from, to, (node, pos) => {
       step++
-      let marksToRemove: Mark[] | null = null
-      const foundMark = markType.isInSet(node.marks)
-      if (foundMark && !validator(foundMark.attrs)) {
-        marksToRemove = [foundMark]
-      }
+      const marksToRemove = getValidatedMarks(node, markType, validator)
       if (marksToRemove && marksToRemove.length) {
         const end = Math.min(pos + node.nodeSize, to)
-
         for (const markToRemove of marksToRemove) {
-          const style = markToRemove
           let found
 
           for (const matchedMark of matchedMarks) {
-            if (matchedMark.step === step - 1 && style.eq(matchedMark.style)) {
+            if (
+              matchedMark.step === step - 1 &&
+              markToRemove.eq(matchedMark.style)
+            ) {
               found = matchedMark
             }
           }
@@ -60,7 +70,7 @@ export function validateAndRemoveMarks(
             found.step = step
           } else {
             matchedMarks.push({
-              style,
+              style: markToRemove,
               from: Math.max(pos, from),
               to: end,
               step,
