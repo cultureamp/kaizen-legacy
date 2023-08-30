@@ -1,4 +1,4 @@
-import { getByRole, getByText, waitFor } from "@testing-library/dom"
+import { getByRole, getByText, waitFor } from "@testing-library/react"
 import { createRichTextEditor } from "../core/create"
 import { simulateSelectionByText } from "./fixtures/helpers"
 import { testEditorStateWithMarks, testSchema } from "./fixtures/test-state"

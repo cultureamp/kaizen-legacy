@@ -1,4 +1,9 @@
-import { findByText, queryByText } from "@testing-library/dom"
+import {
+  waitFor,
+  findByText,
+  queryByText,
+  getByText,
+} from "@testing-library/react"
 import { Command, EditorState, Transaction } from "prosemirror-state"
 import { createRichTextEditor } from "./create"
 import { testEditorState } from "./fixtures/testState"
@@ -17,13 +22,14 @@ describe("createRichTextEditor", () => {
       initialEditorState: testEditorState,
     })
 
-    expect(await findByText(node, "Example content")).toBeInTheDocument()
+    await waitFor(() => {
+      expect(getByText(node, "Example content")).toBeTruthy()
+    })
   })
 
   it("returns the expected API shape", async () => {
     const node = document.createElement("div")
     const onChange = jest.fn()
-
     const returnValue = createRichTextEditor({
       node,
       onChange,
@@ -80,9 +86,9 @@ describe("createRichTextEditor", () => {
 
     dispatchTransaction(command)
 
-    expect(
-      await findByText(node, "Prepended content. Example content")
-    ).toBeInTheDocument()
+    await waitFor(() => {
+      expect(getByText(node, "Prepended content. Example content")).toBeTruthy()
+    })
   })
 
   it("calls onChange when the editor state changes", async () => {

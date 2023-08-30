@@ -1,4 +1,4 @@
-import { findByText, waitFor } from "@testing-library/dom"
+import { findByText, waitFor } from "@testing-library/react"
 import { createRichTextEditor } from "../core/create"
 import { testEditorStateWithMarks, testSchema } from "./fixtures/test-state"
 import { validateAndRemoveMarks } from "./validateAndRemoveMarks"

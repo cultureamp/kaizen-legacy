@@ -1,4 +1,4 @@
-import { waitFor } from "@testing-library/dom"
+import { waitFor } from "@testing-library/react"
 import { EditorState } from "prosemirror-state"
 import { createRichTextEditor } from "../core/create"
 import {
