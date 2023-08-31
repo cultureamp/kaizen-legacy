@@ -85,6 +85,7 @@ export const TextField = ({
         id={`${id}-field-input`}
         automationId={`${id}-field-input`}
         ariaDescribedBy={ariaDescribedBy}
+        classNameOverride={styles.textFieldInput}
         disabled={disabled}
         reversed={reversed}
         status={status}
