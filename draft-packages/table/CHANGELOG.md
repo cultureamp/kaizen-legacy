@@ -1,5 +1,14 @@
 # Change Log
 
+## 5.9.5
+
+### Patch Changes
+
+- [#19](https://github.com/cultureamp/kaizen-legacy/pull/19) [`130cb0c`](https://github.com/cultureamp/kaizen-legacy/commit/130cb0cc61b864fcbe2aac0291381212240be6f2) - fix checkbox focus on table header row
+
+- Updated dependencies [[`a8c5121`](https://github.com/cultureamp/kaizen-legacy/commit/a8c5121f200cfba7281e1b2e1298647771cd8e71)]:
+  - @kaizen/draft-form@10.5.0
+
 ## 5.9.4
 
 ### Patch Changes
