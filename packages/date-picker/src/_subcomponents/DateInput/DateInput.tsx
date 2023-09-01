@@ -34,7 +34,7 @@ export const DateInput = React.forwardRef<HTMLInputElement, DateInputProps>(
         inputRef={isRefObject(ref) ? ref : undefined}
         id={id}
         autoComplete="off"
-        classNameOverride={styles.dateInputInput}
+        classNameOverride={styles.input}
         disabled={disabled}
         reversed={isReversed}
         {...inputProps}
