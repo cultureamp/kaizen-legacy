@@ -58,6 +58,10 @@ $placeholder-opacity: 0.7;
     border-color: rgba($color-gray-500-rgb, 0.7);
   }
 
+  [dir="rtl"] & {
+    text-align: right;
+  }
+
   .value {
     padding-right: $button-base-padding-horizontal;
     padding-left: 1.75rem;
