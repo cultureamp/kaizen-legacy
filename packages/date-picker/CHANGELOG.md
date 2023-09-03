@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.3.1
+
+### Patch Changes
+
+- [#20](https://github.com/cultureamp/kaizen-legacy/pull/20) [`40474b5`](https://github.com/cultureamp/kaizen-legacy/commit/40474b5345f913876bf9574a5d2372d6f3d7d914) - align text right for rtl
+
 ## 6.3.0
 
 ### Minor Changes
