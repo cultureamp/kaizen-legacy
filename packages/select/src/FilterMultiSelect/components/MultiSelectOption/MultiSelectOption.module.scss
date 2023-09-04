@@ -12,7 +12,6 @@ $iconAndBadgeHeight: $spacing-md;
   border: $border-solid-border-width $border-solid-border-style;
   border-color: $color-gray-500;
   border-radius: $border-solid-border-radius;
-  box-sizing: content-box; // Required to overwrite border-box in Murmur.
   display: inline-flex;
   justify-content: center;
   align-items: center;
