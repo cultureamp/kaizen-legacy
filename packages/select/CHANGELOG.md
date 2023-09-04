@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.20.0
+
+### Minor Changes
+
+- [#21](https://github.com/cultureamp/kaizen-legacy/pull/21) [`3f71968`](https://github.com/cultureamp/kaizen-legacy/commit/3f71968135c8174e7c2d442f3095faa58e9bb504) - Add classNameOverride to MultiSelectOption.
+
 ## 6.19.1
 
 ### Patch Changes
