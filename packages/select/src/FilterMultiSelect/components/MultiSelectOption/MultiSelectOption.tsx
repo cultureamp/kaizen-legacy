@@ -1,10 +1,11 @@
-import React, { useMemo } from "react"
+import React, { useMemo, HTMLAttributes } from "react"
 import { useFocusRing } from "@react-aria/focus"
 import { useOption } from "@react-aria/listbox"
 import { mergeProps } from "@react-aria/utils"
 import classnames from "classnames"
 import { v4 } from "uuid"
 import { VisuallyHidden } from "@kaizen/a11y"
+import { OverrideClassName } from "@kaizen/component-base"
 import { Icon } from "@kaizen/component-library"
 import check from "@kaizen/component-library/icons/check.icon.svg"
 import { Badge } from "@kaizen/draft-badge"
@@ -12,11 +13,13 @@ import { MultiSelectItem } from "../../../types"
 import { useSelectionContext } from "../../provider"
 import styles from "./MultiSelectOption.module.scss"
 
-export interface MultiSelectOptionProps {
+export interface MultiSelectOptionProps
+  extends OverrideClassName<HTMLAttributes<HTMLSpanElement>> {
   item: MultiSelectItem
 }
 
 export const MultiSelectOption = ({
+  classNameOverride,
   item,
 }: MultiSelectOptionProps): JSX.Element => {
   const { selectionState: state } = useSelectionContext()
@@ -39,6 +42,7 @@ export const MultiSelectOption = ({
       ref={ref}
       className={classnames(
         styles.option,
+        classNameOverride,
         isSelected && styles.isSelected,
         isFocusVisible && styles.isFocusVisible,
         isDisabled && styles.isDisabled
