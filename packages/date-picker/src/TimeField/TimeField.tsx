@@ -101,7 +101,10 @@ const TimeFieldComponent = ({
         tag="div"
         variant="heading-6"
         {...labelProps}
-        classNameOverride={classnames(state.isDisabled && styles.isDisabled)}
+        classNameOverride={classnames(
+          styles.heading,
+          state.isDisabled && styles.isDisabled
+        )}
       >
         {label}
       </Heading>
