@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.3.2
+
+### Patch Changes
+
+- [#24](https://github.com/cultureamp/kaizen-legacy/pull/24) [`948b07c`](https://github.com/cultureamp/kaizen-legacy/commit/948b07c671aa8c364741ee2fe1bc5aeb47d96a0a) - Align spacing and disabled state with DatePicker
+
 ## 6.3.1
 
 ### Patch Changes
