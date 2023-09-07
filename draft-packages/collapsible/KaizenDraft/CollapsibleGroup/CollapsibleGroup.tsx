@@ -24,8 +24,7 @@ export interface CollapsibleGroupProps
 }
 
 /**
- * {@link https://cultureamp.design/components/collapsible/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-collapsible--collapsible-group-default Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const CollapsibleGroup = ({
   children,

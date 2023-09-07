@@ -30,8 +30,7 @@ export interface CardProps
 }
 
 /**
- * {@link https://cultureamp.design/components/card/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/story/components-card--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Card = ({
   children,

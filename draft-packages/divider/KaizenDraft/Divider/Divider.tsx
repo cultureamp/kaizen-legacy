@@ -10,8 +10,7 @@ export interface DividerProps
 }
 
 /**
- * {@link https://cultureamp.design/components/divider/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-divider--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Divider = ({
   variant,

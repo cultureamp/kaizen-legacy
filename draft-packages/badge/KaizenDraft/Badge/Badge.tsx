@@ -28,8 +28,7 @@ interface DotProps extends Omit<CommonProps, "variant"> {
 export type BadgeProps = CommonProps | DotProps
 
 /**
- * {@link https://cultureamp.design/components/badge/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-badge--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Badge = ({
   children,

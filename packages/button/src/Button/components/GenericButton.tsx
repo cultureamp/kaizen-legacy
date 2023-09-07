@@ -89,6 +89,9 @@ const getCustomProps = (props: Record<string, any>): Record<string, string> => {
   }, {})
 }
 
+/**
+ * @deprecated We no longer support the external use of GenericButton
+ */
 const GenericButton = forwardRef(
   (props: Props, ref: Ref<ButtonRef | undefined>) => {
     const buttonRef = useRef<HTMLButtonElement | HTMLAnchorElement>()

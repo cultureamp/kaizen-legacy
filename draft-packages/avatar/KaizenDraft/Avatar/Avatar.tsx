@@ -113,8 +113,7 @@ const renderInitials = (
 }
 
 /**
- * {@link https://cultureamp.design/components/avatar/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-avatar-avatar--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Avatar = ({
   fullName,

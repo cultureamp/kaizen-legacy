@@ -52,8 +52,7 @@ type State = {
 }
 
 /**
- * {@link https://cultureamp.design/components/collapsible/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-collapsible--single-collapsible-kaizen-site-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export class Collapsible extends React.Component<CollapsibleProps, State> {
   public state = {

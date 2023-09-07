@@ -26,8 +26,7 @@ export type ButtonProps = GenericProps &
   }
 
 /**
- * {@link https://cultureamp.design/components/button/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-button--default-kaizen-site-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Button = forwardRef(
   (props: ButtonProps, ref: Ref<ButtonRef | undefined>) => (
