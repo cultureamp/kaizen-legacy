@@ -1,13 +1,4 @@
 import {
-  ProseMirrorCommands,
-  ProseMirrorState,
-  ProseMirrorModel,
-  ProseMirrorSchemaList,
-  ProseMirrorHistory,
-  ProseMirrorInputrules,
-} from "@cultureamp/rich-text-toolkit"
-
-const {
   chainCommands,
   exitCode,
   joinDown,
@@ -16,21 +7,27 @@ const {
   selectParentNode,
   setBlockType,
   toggleMark,
-} = ProseMirrorCommands
-const { redo, undo } = ProseMirrorHistory
-const { undoInputRule } = ProseMirrorInputrules
-const { wrapInList, splitListItem, liftListItem, sinkListItem } =
-  ProseMirrorSchemaList
+} from "prosemirror-commands"
+import { redo, undo } from "prosemirror-history"
+import { undoInputRule } from "prosemirror-inputrules"
+import { Schema } from "prosemirror-model"
+import {
+  wrapInList,
+  splitListItem,
+  liftListItem,
+  sinkListItem,
+} from "prosemirror-schema-list"
+import { Command } from "prosemirror-state"
 
 const mac =
   // eslint-disable-next-line ssr-friendly/no-dom-globals-in-module-scope
   typeof navigator != "undefined" ? /Mac/.test(navigator.platform) : false
 
 interface KeyBinding {
-  [key: string]: ProseMirrorState.Command
+  [key: string]: Command
 }
 
-export function buildKeymap(schema: ProseMirrorModel.Schema): KeyBinding {
+export function buildKeymap(schema: Schema): KeyBinding {
   const keys: KeyBinding = {
     "Mod-z": undo,
     "Shift-Mod-z": redo,

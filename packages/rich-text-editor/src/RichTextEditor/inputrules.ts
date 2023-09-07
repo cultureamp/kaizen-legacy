@@ -1,14 +1,13 @@
 import {
-  ProseMirrorInputrules,
-  ProseMirrorModel,
-  orderedListRule,
-  bulletListRule,
-} from "@cultureamp/rich-text-toolkit"
+  ellipsis,
+  emDash,
+  inputRules,
+  smartQuotes,
+} from "prosemirror-inputrules"
+import { Schema } from "prosemirror-model"
+import { orderedListRule, bulletListRule } from "../Toolkit"
 
-export function buildInputRules(
-  schema: ProseMirrorModel.Schema
-): ReturnType<(typeof ProseMirrorInputrules)["inputRules"]> {
-  const { smartQuotes, ellipsis, emDash, inputRules } = ProseMirrorInputrules
+export function buildInputRules(schema: Schema): ReturnType<typeof inputRules> {
   const rules = smartQuotes.concat(ellipsis, emDash)
 
   if (schema.nodes.orderedList) {

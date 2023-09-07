@@ -1,11 +1,7 @@
-import {
-  ProseMirrorState,
-  ProseMirrorModel,
-  ProseMirrorCommands,
-  ProseMirrorSchemaList,
-  markIsActive,
-  listIsActive,
-} from "@cultureamp/rich-text-toolkit"
+import { toggleMark } from "prosemirror-commands"
+import { MarkType, NodeType, Schema } from "prosemirror-model"
+import { liftListItem, sinkListItem, wrapInList } from "prosemirror-schema-list"
+import { Command, EditorState, Transaction } from "prosemirror-state"
 import linkIcon from "@kaizen/component-library/icons/add-link.icon.svg"
 import boldIcon from "@kaizen/component-library/icons/bold.icon.svg"
 import bulletListIcon from "@kaizen/component-library/icons/bulletted-list.icon.svg"
@@ -14,6 +10,7 @@ import increaseIndentIcon from "@kaizen/component-library/icons/increase-indent.
 import italicIcon from "@kaizen/component-library/icons/italics.icon.svg"
 import numberedListIcon from "@kaizen/component-library/icons/numbered-list.icon.svg"
 import underlineIcon from "@kaizen/component-library/icons/underline.icon.svg"
+import { markIsActive, listIsActive } from "../Toolkit"
 
 import { ToolbarItems, ToolbarControlTypes } from "../types"
 
@@ -23,7 +20,7 @@ type ToolbarControl = {
   label: string
   isActive: boolean
   disabled?: boolean
-  action: ProseMirrorState.Command
+  action: Command
 }
 
 /** Toolbar controls mapped to a group */
@@ -37,11 +34,9 @@ type ControlGroupTypes = {
 }
 
 /** Chains multiple commands to dispatch each transitions in sequential order */
-function chainTransactions(
-  ...commands: ProseMirrorState.Command[]
-): ProseMirrorState.Command {
+function chainTransactions(...commands: Command[]): Command {
   return (state, dispatch): boolean => {
-    const updateStateAndDispatch = (tr: ProseMirrorState.Transaction): void => {
+    const updateStateAndDispatch = (tr: Transaction): void => {
       state = state.apply(tr)
       dispatch && dispatch(tr)
     }
@@ -57,8 +52,8 @@ function chainTransactions(
 
 /** Dispatches a transaction to create initial p tag required for pm commands */
 function createInitialParagraph(
-  state: ProseMirrorState.EditorState,
-  dispatch?: (tr: ProseMirrorState.Transaction) => void
+  state: EditorState,
+  dispatch?: (tr: Transaction) => void
 ): boolean {
   if (dispatch) {
     const { tr, schema } = state
@@ -70,73 +65,69 @@ function createInitialParagraph(
 }
 
 /** Create command for toggling Marks */
-function createToggleMarkCommand(
-  mark: ProseMirrorModel.MarkType
-): ProseMirrorState.Command {
+function createToggleMarkCommand(mark: MarkType): Command {
   return (
-    state: ProseMirrorState.EditorState,
-    dispatch: ((tr: ProseMirrorState.Transaction) => void) | undefined
+    state: EditorState,
+    dispatch: ((tr: Transaction) => void) | undefined
   ) => {
     const docIsEmpty = state.doc.content.size === 0
 
     if (docIsEmpty) {
-      return chainTransactions(
-        createInitialParagraph,
-        ProseMirrorCommands.toggleMark(mark)
-      )(state, dispatch)
+      return chainTransactions(createInitialParagraph, toggleMark(mark))(
+        state,
+        dispatch
+      )
     }
-    return ProseMirrorCommands.toggleMark(mark)(state, dispatch)
+    return toggleMark(mark)(state, dispatch)
   }
 }
 
 /** Create command for toggling Lists */
-function createToggleListCommand(
-  node: ProseMirrorModel.NodeType
-): ProseMirrorState.Command {
+function createToggleListCommand(node: NodeType): Command {
   return (
-    state: ProseMirrorState.EditorState,
-    dispatch: ((tr: ProseMirrorState.Transaction) => void) | undefined
+    state: EditorState,
+    dispatch: ((tr: Transaction) => void) | undefined
   ) => {
     const docIsEmpty = state.doc.content.size === 0
 
     if (docIsEmpty) {
-      return chainTransactions(
-        createInitialParagraph,
-        ProseMirrorSchemaList.wrapInList(node)
-      )(state, dispatch)
+      return chainTransactions(createInitialParagraph, wrapInList(node))(
+        state,
+        dispatch
+      )
     }
-    return ProseMirrorSchemaList.wrapInList(node)(state, dispatch)
+    return wrapInList(node)(state, dispatch)
   }
 }
 
 /** Create command for reducing indents in a List */
-function createLiftListCommand(): ProseMirrorState.Command {
+function createLiftListCommand(): Command {
   return (
-    state: ProseMirrorState.EditorState,
-    dispatch: ((tr: ProseMirrorState.Transaction) => void) | undefined
+    state: EditorState,
+    dispatch: ((tr: Transaction) => void) | undefined
   ) => {
     const { $from } = state.selection
     // calculate the parent node from the current tag selected
     const listItemNode = $from.node($from.depth - 1)?.type
-    return ProseMirrorSchemaList.liftListItem(listItemNode)(state, dispatch)
+    return liftListItem(listItemNode)(state, dispatch)
   }
 }
 
 /** Create command for indenting in a List */
-function createIndentListCommand(): ProseMirrorState.Command {
+function createIndentListCommand(): Command {
   return (
-    state: ProseMirrorState.EditorState,
-    dispatch: ((tr: ProseMirrorState.Transaction) => void) | undefined
+    state: EditorState,
+    dispatch: ((tr: Transaction) => void) | undefined
   ) => {
     const { $from } = state.selection
     const listItemNode = $from.node($from.depth - 1)?.type
 
-    return ProseMirrorSchemaList.sinkListItem(listItemNode)(state, dispatch)
+    return sinkListItem(listItemNode)(state, dispatch)
   }
 }
 
 /** handler lift list disabled state */
-function liftListIsDisabled(state: ProseMirrorState.EditorState): boolean {
+function liftListIsDisabled(state: EditorState): boolean {
   const { $from } = state.selection
   const listItemNode = $from.node($from.depth - 1)?.type
   const isValidListItem = listItemNode?.name === "listItem" || false
@@ -145,7 +136,7 @@ function liftListIsDisabled(state: ProseMirrorState.EditorState): boolean {
 }
 
 /** handler indent list disabled state */
-function indentListIsDisabled(state: ProseMirrorState.EditorState): boolean {
+function indentListIsDisabled(state: EditorState): boolean {
   const { $from, $to } = state.selection
   const listItemNode = $from.node($from.depth - 1)?.type
   const isValidListItem = listItemNode?.name === "listItem" || false
@@ -212,8 +203,8 @@ const filterToolbarControls = (
 
 /** Builds an array of object used to map control configuration to rte toolbar buttons */
 export function buildControlMap(
-  schema: ProseMirrorModel.Schema,
-  editorState: ProseMirrorState.EditorState,
+  schema: Schema,
+  editorState: EditorState,
   controls?: ToolbarItems[]
 ): ToolbarControl[][] {
   if (!controls) return []
