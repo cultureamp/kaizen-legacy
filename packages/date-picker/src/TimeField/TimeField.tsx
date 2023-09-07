@@ -97,7 +97,15 @@ const TimeFieldComponent = ({
   )
   return (
     <div className={classNameOverride}>
-      <Heading tag="div" variant="heading-6" {...labelProps}>
+      <Heading
+        tag="div"
+        variant="heading-6"
+        {...labelProps}
+        classNameOverride={classnames(
+          styles.heading,
+          state.isDisabled && styles.isDisabled
+        )}
+      >
         {label}
       </Heading>
       <div className={styles.wrapper}>

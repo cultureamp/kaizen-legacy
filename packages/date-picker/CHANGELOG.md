@@ -1,5 +1,28 @@
 # Change Log
 
+## 6.3.2
+
+### Patch Changes
+
+- [#24](https://github.com/cultureamp/kaizen-legacy/pull/24) [`948b07c`](https://github.com/cultureamp/kaizen-legacy/commit/948b07c671aa8c364741ee2fe1bc5aeb47d96a0a) - Align spacing and disabled state with DatePicker
+
+## 6.3.1
+
+### Patch Changes
+
+- [#20](https://github.com/cultureamp/kaizen-legacy/pull/20) [`40474b5`](https://github.com/cultureamp/kaizen-legacy/commit/40474b5345f913876bf9574a5d2372d6f3d7d914) - align text right for rtl
+
+## 6.3.0
+
+### Minor Changes
+
+- [#16](https://github.com/cultureamp/kaizen-legacy/pull/16) [`a8c5121`](https://github.com/cultureamp/kaizen-legacy/commit/a8c5121f200cfba7281e1b2e1298647771cd8e71) - add margin top to input and button to match labels from other components
+
+### Patch Changes
+
+- Updated dependencies [[`a8c5121`](https://github.com/cultureamp/kaizen-legacy/commit/a8c5121f200cfba7281e1b2e1298647771cd8e71)]:
+  - @kaizen/draft-form@10.5.0
+
 ## 6.2.5
 
 ### Patch Changes
