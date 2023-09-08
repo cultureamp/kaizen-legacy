@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.20.1
+
+### Patch Changes
+
+- [#27](https://github.com/cultureamp/kaizen-legacy/pull/27) [`1d5f879`](https://github.com/cultureamp/kaizen-legacy/commit/1d5f8790adecd927612059b965628deb31a5ac82) - fix Select label font colour when disabled
+
 ## 6.20.0
 
 ### Minor Changes
