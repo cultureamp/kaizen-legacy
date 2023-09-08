@@ -161,7 +161,7 @@ export const Select = ({
           classNameOverride
         )}
       >
-        <Label {...labelProps} reversed={isReversed}>
+        <Label {...labelProps} reversed={isReversed} disabled={isDisabled}>
           {label}
         </Label>
         <HiddenSelect
