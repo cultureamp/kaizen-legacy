@@ -18,8 +18,11 @@ const getSelectionOfNode = (node: Node): void => {
 }
 
 const TestRTE = (
-  args: Omit<RichTextEditorProps, "value" | "onChange" | "aria-labelledby"> & {
-    rteMockData?: RichTextEditorProps["value"]
+  args: Omit<
+    RichTextEditorProps,
+    "defaultValue" | "onChange" | "aria-labelledby"
+  > & {
+    rteMockData?: RichTextEditorProps["defaultValue"]
   }
 ): JSX.Element => {
   const { rteMockData, ...rest } = args
@@ -34,7 +37,7 @@ const TestRTE = (
         { name: "orderedList", group: "list" },
         { name: "bulletList", group: "list" },
       ]}
-      value={rteData}
+      defaultValue={rteData}
       onChange={handleOnChange}
       {...rest}
     />

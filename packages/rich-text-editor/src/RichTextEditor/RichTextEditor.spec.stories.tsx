@@ -21,7 +21,7 @@ const TestBase: Story = {
     return (
       <RichTextEditor
         labelText="Label"
-        value={rteData}
+        defaultValue={rteData}
         onChange={handleOnChange}
         rows={3}
         controls={[
