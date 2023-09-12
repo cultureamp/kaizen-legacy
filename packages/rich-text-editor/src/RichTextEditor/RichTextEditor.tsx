@@ -23,10 +23,10 @@ import styles from "./RichTextEditor.module.scss"
 
 export interface BaseRichTextEditorProps
   extends OverrideClassName<
-    Omit<HTMLAttributes<HTMLDivElement>, "onChange" | "content">
+    Omit<HTMLAttributes<HTMLDivElement>, "onChange" | "defaultValue">
   > {
   onChange: (content: ProseMirrorState.EditorState) => void
-  value: EditorContentArray
+  defaultValue: EditorContentArray
   controls?: ToolbarItems[]
   /**
    * Sets a default min-height for the editable area in units of body paragraph line height, similar to the 'rows' attribute on <textarea>.
@@ -64,7 +64,7 @@ export type RichTextEditorProps = RTEWithLabelText | RTEWithLabelledBy
 export const RichTextEditor = (props: RichTextEditorProps): JSX.Element => {
   const {
     onChange,
-    value,
+    defaultValue,
     labelText,
     "aria-labelledby": labelledBy,
     classNameOverride,
@@ -93,7 +93,8 @@ export const RichTextEditor = (props: RichTextEditorProps): JSX.Element => {
             type: "doc",
             // we're converting empty arrays to the ProseMirror default "empty" state because when
             // given an empty array ProseMirror returns undefined, breaking the type
-            content: value?.length > 0 ? value : [{ type: "paragraph" }],
+            content:
+              defaultValue?.length > 0 ? defaultValue : [{ type: "paragraph" }],
           }),
           schema,
           plugins: getPlugins(controls, schema),
