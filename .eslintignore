@@ -1,1 +1,9 @@
 /packages/**/dist
+/draft-packages/**/*.js
+/draft-packages/**/*.js.map
+/draft-packages/**/*.d.ts
+/packages/**/*.js
+!/packages/**/*.config.js
+!/packages/**/svgMock.js
+/packages/**/*.js.map
+/packages/**/*.d.ts

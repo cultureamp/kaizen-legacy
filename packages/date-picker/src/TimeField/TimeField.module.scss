@@ -22,6 +22,10 @@ $story-className--timefield-focus: ":global(.story__timefield-focus)";
   color: $color-purple-800;
 }
 
+.heading {
+  margin-bottom: $spacing-6;
+}
+
 .input {
   display: inline-flex;
   align-items: center;

@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.5.0
+
+### Minor Changes
+
+- [#16](https://github.com/cultureamp/kaizen-legacy/pull/16) [`a8c5121`](https://github.com/cultureamp/kaizen-legacy/commit/a8c5121f200cfba7281e1b2e1298647771cd8e71) - add margin top to input and button to match labels from other components
+
 ## 10.4.9
 
 ### Patch Changes

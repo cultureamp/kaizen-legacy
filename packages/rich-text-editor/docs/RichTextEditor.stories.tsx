@@ -9,7 +9,7 @@ import dummyContent from "./dummyContent.json"
 import dummyMalformedContent from "./dummyMalformedContent.json"
 
 type RTEStory = StoryFn<
-  Omit<RichTextEditorProps, "value" | "onChange" | "aria-labelledby">
+  Omit<RichTextEditorProps, "defaultValue" | "onChange" | "aria-labelledby">
 >
 
 export default {
@@ -32,7 +32,7 @@ export const Default: RTEStory = ({ labelText, ...args }) => {
   return (
     <RichTextEditor
       labelText={labelText}
-      value={rteData}
+      defaultValue={rteData}
       onChange={handleOnChange}
       {...args}
     />
@@ -60,7 +60,7 @@ export const WithData: RTEStory = ({ labelText, ...args }) => {
   return (
     <RichTextEditor
       labelText={labelText}
-      value={rteData}
+      defaultValue={rteData}
       onChange={handleOnChange}
       {...args}
     />
@@ -89,7 +89,7 @@ export const WithBadData: RTEStory = ({ labelText, ...args }) => {
   return (
     <RichTextEditor
       labelText={labelText}
-      value={rteData}
+      defaultValue={rteData}
       onChange={handleOnChange}
       {...args}
     />
@@ -121,14 +121,14 @@ export const WithDescriptionAndValidationMessage: RTEStory = ({
     <>
       <RichTextEditor
         labelText={labelText}
-        value={rteData}
+        defaultValue={rteData}
         onChange={handleOnChange}
         status="error"
         {...args}
       />
       <RichTextEditor
         labelText={labelText}
-        value={rteData}
+        defaultValue={rteData}
         onChange={handleOnChange}
         status="caution"
         {...args}

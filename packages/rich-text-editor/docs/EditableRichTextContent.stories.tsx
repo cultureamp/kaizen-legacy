@@ -60,7 +60,7 @@ function InlineEditor(props: {
             { name: "bulletList", group: "list" },
             { name: "link", group: "link" },
           ]}
-          value={rteData}
+          defaultValue={rteData}
           onChange={handleOnChange}
         />
         <Box mt={0.5} style={{ display: "flex", justifyContent: "end" }}>
