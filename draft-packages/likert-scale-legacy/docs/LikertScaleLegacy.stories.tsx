@@ -78,9 +78,10 @@ DefaultStory.args = {
   labelId: "456",
 }
 
-const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
-  isReversed,
-}) => {
+const StickerSheetTemplate: StoryFn<{
+  isReversed: boolean
+  textDirection: "ltr" | "rtl"
+}> = ({ isReversed }) => {
   const SectionHeading = ({ heading }: { heading: string }): JSX.Element => (
     <Heading variant="heading-3" tag="h1" color={isReversed ? "white" : "dark"}>
       {heading}
@@ -172,6 +173,28 @@ export const StickerSheetReversed = StickerSheetTemplate.bind({})
 StickerSheetReversed.storyName = "Sticker Sheet (Reversed)"
 StickerSheetReversed.args = { isReversed: true }
 StickerSheetReversed.parameters = {
+  backgrounds: { default: "Purple 700" },
+  chromatic: { disable: false },
+  controls: { disable: true },
+}
+
+export const StickerSheetRTL = StickerSheetTemplate.bind({})
+StickerSheetRTL.storyName = "Sticker Sheet (RTL)"
+StickerSheetRTL.args = {
+  textDirection: "rtl", // Global control; see storybook/preview.tsx
+}
+StickerSheetRTL.parameters = {
+  chromatic: { disable: false },
+  controls: { disable: true },
+}
+
+export const StickerSheetReversedRTL = StickerSheetTemplate.bind({})
+StickerSheetReversedRTL.storyName = "Sticker Sheet (Reversed & RTL)"
+StickerSheetReversedRTL.args = {
+  isReversed: true,
+  textDirection: "rtl", // Global control; see storybook/preview.tsx
+}
+StickerSheetReversedRTL.parameters = {
   backgrounds: { default: "Purple 700" },
   chromatic: { disable: false },
   controls: { disable: true },

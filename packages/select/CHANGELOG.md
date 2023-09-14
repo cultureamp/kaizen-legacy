@@ -1,5 +1,39 @@
 # Change Log
 
+## 6.20.1
+
+### Patch Changes
+
+- [#27](https://github.com/cultureamp/kaizen-legacy/pull/27) [`1d5f879`](https://github.com/cultureamp/kaizen-legacy/commit/1d5f8790adecd927612059b965628deb31a5ac82) - fix Select label font colour when disabled
+
+## 6.20.0
+
+### Minor Changes
+
+- [#21](https://github.com/cultureamp/kaizen-legacy/pull/21) [`3f71968`](https://github.com/cultureamp/kaizen-legacy/commit/3f71968135c8174e7c2d442f3095faa58e9bb504) - Add classNameOverride to MultiSelectOption.
+
+## 6.19.1
+
+### Patch Changes
+
+- [#17](https://github.com/cultureamp/kaizen-legacy/pull/17) [`9b8dc9e`](https://github.com/cultureamp/kaizen-legacy/commit/9b8dc9e9fa99d69ab21feba77fbc0ed706fc3986) - use margin-inline so that icon spacing swaps in rtl
+
+- Updated dependencies [[`a8c5121`](https://github.com/cultureamp/kaizen-legacy/commit/a8c5121f200cfba7281e1b2e1298647771cd8e71)]:
+  - @kaizen/draft-form@10.5.0
+
+## 6.19.0
+
+### Minor Changes
+
+- [#9](https://github.com/cultureamp/kaizen-legacy/pull/9) [`8ea613c`](https://github.com/cultureamp/kaizen-legacy/commit/8ea613cba997b1e85fcaa4ddc92656b9de3c1a48) - Update FilterMultiSelect ListBoxSection to avoid duplicate reading of sectionName as the accessible title.
+
+  - Update sectionName to be optional if sectionHeader is provided
+    - This will solve the issue of sectionName and sectionHeader being read twice when they are the same
+  - Minor style change to ensure hide bullet lists as filtering
+  - Minor style changes to allow for default text styles for section headings with just text
+  - Add conditional check to render the sectionName only if provided
+  - Add tests to validate type accessible names are constructed as expected
+
 ## 6.18.3
 
 ### Patch Changes
