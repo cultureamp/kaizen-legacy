@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.20.2
+
+### Patch Changes
+
+- [#32](https://github.com/cultureamp/kaizen-legacy/pull/32) [`8cba8ba`](https://github.com/cultureamp/kaizen-legacy/commit/8cba8bae111e0567aae5bf9f769a9460b13ba8d0) - fix: add flex-shrink 0 so that the chevron up/down icon has the correct 20x20 width
+
 ## 6.20.1
 
 ### Patch Changes
