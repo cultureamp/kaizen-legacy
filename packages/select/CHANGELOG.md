@@ -1,5 +1,13 @@
 # Change Log
 
+## 6.20.3
+
+### Patch Changes
+
+- [#34](https://github.com/cultureamp/kaizen-legacy/pull/34) [`8af16b6`](https://github.com/cultureamp/kaizen-legacy/commit/8af16b65db1efd84ad1ccff0cfb34c8f495cbe7e) - fix: add flex-shrink 0 to FilterMultiSelect TriggerButtonBase
+
+  the width of the chevron up/down icon was not displaying as 20x20 when a width was applied to the button
+
 ## 6.20.2
 
 ### Patch Changes
