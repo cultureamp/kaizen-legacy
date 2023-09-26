@@ -19,8 +19,7 @@ export interface RadioFieldProps extends Omit<RadioProps, "id"> {
 }
 
 /**
- * {@link https://cultureamp.design/components/radio-field/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-form-radio-field--interactive-kaizen-site-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const RadioField = ({
   id: propsId,

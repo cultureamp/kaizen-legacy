@@ -19,6 +19,9 @@ export interface RadioGroupProps
   automationId?: string
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const RadioGroup = ({
   children,
   labelId: propsLabelId,

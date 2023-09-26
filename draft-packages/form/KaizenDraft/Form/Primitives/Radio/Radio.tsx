@@ -31,6 +31,9 @@ const renderSelected = (
   return
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Radio = ({
   name,
   value,
