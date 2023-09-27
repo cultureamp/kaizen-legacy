@@ -1,0 +1,6 @@
+---
+"@kaizen/draft-menu": major
+"@kaizen/select": major
+---
+
+add overflow and max-height so that a scrollbar is visible for long lists
