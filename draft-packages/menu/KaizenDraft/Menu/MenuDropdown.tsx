@@ -74,6 +74,15 @@ export const MenuDropdown = ({
     hideMenuDropdown()
   }, [hideMenuDropdown])
 
+  const handleKeyUp = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        hideMenuDropdown()
+      }
+    },
+    [hideMenuDropdown]
+  )
+
   const handleRootClick = (): void => {
     if (autoHide === "on") {
       // ie. is not equal to "off" | "outside-click-only"
@@ -104,6 +113,14 @@ export const MenuDropdown = ({
       }
     }
   }, [autoHide, handleDocumentClickForAutoHide])
+
+  useEffect(() => {
+    window.addEventListener("keyup", handleKeyUp)
+
+    return () => {
+      window.removeEventListener("keyup", handleKeyUp)
+    }
+  }, [handleKeyUp])
 
   return (
     // Disabling these because we don't want this to be keyboard focusable.
