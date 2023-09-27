@@ -60,6 +60,7 @@ export type WorkingProps = {
 
 export type WorkingUndefinedProps = {
   working?: false
+  workingLabel?: string
 }
 
 type Props = ButtonProps & {
@@ -116,7 +117,7 @@ const GenericButton = forwardRef(
           styles.container,
           props.fullWidth && styles.fullWidth
         )}
-        aria-live="polite"
+        aria-live={props.workingLabel ? "polite" : undefined}
       >
         {determineButtonRenderer()}
       </span>
