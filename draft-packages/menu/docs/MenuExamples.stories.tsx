@@ -74,7 +74,7 @@ export const ShortListExample: StoryFn = () => (
     </Menu>
   </StoryWrapper>
 )
-ShortListExample.storyName = "Open Short list"
+ShortListExample.storyName = "Open short list"
 
 export const LongListExample: StoryFn = () => (
   <StoryWrapper>
