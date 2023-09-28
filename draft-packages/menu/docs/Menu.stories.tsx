@@ -79,6 +79,29 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
 }) => (
   <StoryWrapper isReversed={isReversed}>
     <StoryWrapper.RowHeader headings={["Default", "Icon Button"]} />
+
+    <StoryWrapper.Row rowTitle="Short list">
+      <Menu
+        button={
+          <Button
+            label="Select a value"
+            icon={chevronDown}
+            iconPosition="end"
+            reversed={isReversed}
+          />
+        }
+      >
+        <MenuContentExample isShortList={true} />
+      </Menu>
+      <Menu
+        button={
+          <IconButton label="" icon={meatballsIcon} reversed={isReversed} />
+        }
+      >
+        <MenuContentExample />
+      </Menu>
+    </StoryWrapper.Row>
+
     <StoryWrapper.Row rowTitle="Closed">
       <Menu
         button={
@@ -100,6 +123,7 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
         <MenuContentExample />
       </Menu>
     </StoryWrapper.Row>
+
     <StoryWrapper.Row rowTitle="Open">
       <Menu
         menuVisible
