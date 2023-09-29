@@ -19,6 +19,9 @@ export interface FieldGroupProps
   automationId?: string
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const FieldGroup = ({
   children,
   inline = false,

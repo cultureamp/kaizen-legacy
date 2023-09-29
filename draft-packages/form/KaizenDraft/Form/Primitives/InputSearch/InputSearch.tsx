@@ -18,6 +18,9 @@ export interface InputSearchProps
   onClear?: () => void
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InputSearch = (props: InputSearchProps): JSX.Element => {
   const {
     value,

@@ -12,8 +12,7 @@ export interface SearchFieldProps extends Omit<InputSearchProps, "id"> {
 }
 
 /**
- * {@link https://cultureamp.design/components/search-field/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-form-search-field--default-kaizen-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const SearchField = ({
   id: propsId,
