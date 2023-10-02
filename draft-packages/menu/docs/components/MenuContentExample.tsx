@@ -6,72 +6,97 @@ import trashIcon from "@kaizen/component-library/icons/trash.icon.svg"
 
 import { MenuList, MenuItem, MenuHeading } from "../.."
 
+interface MenuContentExampleProps {
+  isShortList?: boolean
+}
+
 /**
  * This is an mocked example of a Menu's children using all of the subcomponents.
  */
-export const MenuContentExample = (): JSX.Element => (
+export const MenuContentExample = ({
+  isShortList,
+}: MenuContentExampleProps): JSX.Element => (
   <>
     <MenuList heading={<MenuHeading>Links</MenuHeading>}>
       <MenuItem href="https://www.cultureamp.com/" label="Menu link" />
       <MenuItem href="https://www.cultureamp.com/" label="Menu link" />
       <MenuItem href="https://www.cultureamp.com/" label="Menu link" />
     </MenuList>
-    <MenuList heading={<MenuHeading>Buttons</MenuHeading>}>
-      <MenuItem
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-          alert("Hello")
-          e.preventDefault()
-        }}
-        icon={editIcon}
-        label="Menu button"
-      />
-      <MenuItem
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-          e.preventDefault()
-        }}
-        icon={duplicateIcon}
-        label="Menu button but the label is too long"
-      />
-      <MenuItem
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-          e.preventDefault()
-        }}
-        icon={trashIcon}
-        destructive
-        label="Destructive Menu button"
-      />
-      <MenuItem
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-          e.preventDefault()
-        }}
-        icon={trashIcon}
-        disabled
-        label="Disabled Menu button"
-      />
-      <MenuItem
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-          e.preventDefault()
-        }}
-        icon={trashIcon}
-        disabled
-        destructive
-        label="Disabled Destructive Menu button"
-      />
-    </MenuList>
-    <MenuList heading={<MenuHeading>Buttons (no icons)</MenuHeading>}>
-      <MenuItem
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-          e.preventDefault()
-        }}
-        label="Menu button no icons"
-      />
-      <MenuItem
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-          e.preventDefault()
-        }}
-        disabled
-        label="Disabled button no icon"
-      />
-    </MenuList>
+
+    {!isShortList && (
+      <>
+        <MenuList heading={<MenuHeading>Buttons</MenuHeading>}>
+          <MenuItem
+            onClick={(
+              e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+            ): void => {
+              alert("Hello")
+              e.preventDefault()
+            }}
+            icon={editIcon}
+            label="Menu button"
+          />
+          <MenuItem
+            onClick={(
+              e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+            ): void => {
+              e.preventDefault()
+            }}
+            icon={duplicateIcon}
+            label="Menu button but the label is too long"
+          />
+          <MenuItem
+            onClick={(
+              e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+            ): void => {
+              e.preventDefault()
+            }}
+            icon={trashIcon}
+            destructive
+            label="Destructive Menu button"
+          />
+          <MenuItem
+            onClick={(
+              e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+            ): void => {
+              e.preventDefault()
+            }}
+            icon={trashIcon}
+            disabled
+            label="Disabled Menu button"
+          />
+          <MenuItem
+            onClick={(
+              e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+            ): void => {
+              e.preventDefault()
+            }}
+            icon={trashIcon}
+            disabled
+            destructive
+            label="Disabled Destructive Menu button"
+          />
+        </MenuList>
+        <MenuList heading={<MenuHeading>Buttons (no icons)</MenuHeading>}>
+          <MenuItem
+            onClick={(
+              e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+            ): void => {
+              e.preventDefault()
+            }}
+            label="Menu button no icons"
+          />
+          <MenuItem
+            onClick={(
+              e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+            ): void => {
+              e.preventDefault()
+            }}
+            disabled
+            label="Disabled button no icon"
+          />
+        </MenuList>
+      </>
+    )}
   </>
 )
