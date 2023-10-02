@@ -63,6 +63,32 @@ export const DefaultStory: StoryFn<typeof Menu> = args => (
 )
 DefaultStory.storyName = "Basic example"
 
+export const ShortListExample: StoryFn = () => (
+  <StoryWrapper>
+    <Menu
+      menuVisible
+      autoHide="off"
+      button={<Button label="Label" icon={chevronDown} iconPosition="end" />}
+    >
+      <MenuContentExample isShortList />
+    </Menu>
+  </StoryWrapper>
+)
+ShortListExample.storyName = "Open short list"
+
+export const LongListExample: StoryFn = () => (
+  <StoryWrapper>
+    <Menu
+      menuVisible
+      autoHide="off"
+      button={<Button label="Label" icon={chevronDown} iconPosition="end" />}
+    >
+      <MenuContentExample />
+    </Menu>
+  </StoryWrapper>
+)
+LongListExample.storyName = "Open long list"
+
 export const IconExample: StoryFn = () => (
   <StoryWrapper>
     <StoryWrapper.RowHeader headings={["Default", "Primary", "Secondary"]} />
