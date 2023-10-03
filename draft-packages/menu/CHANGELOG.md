@@ -1,5 +1,16 @@
 # Change Log
 
+## 5.1.0
+
+### Minor Changes
+
+- [#41](https://github.com/cultureamp/kaizen-legacy/pull/41) [`e470f4a`](https://github.com/cultureamp/kaizen-legacy/commit/e470f4af97d5d1b3b586516df7c68dd77ec36845) - add overflow and max-height so that a scrollbar is visible for long lists
+
+### Patch Changes
+
+- Updated dependencies [[`d1615e5`](https://github.com/cultureamp/kaizen-legacy/commit/d1615e5271d23608b32b44fbdd155f7445ef46fd)]:
+  - @kaizen/button@3.0.5
+
 ## 5.0.2
 
 ### Patch Changes

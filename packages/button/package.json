@@ -1,6 +1,6 @@
 {
   "name": "@kaizen/button",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "The Button component",
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",
