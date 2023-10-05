@@ -2,4 +2,4 @@
 "@kaizen/select": minor
 ---
 
-add isDisabled prop
+fix: add disabled prop
