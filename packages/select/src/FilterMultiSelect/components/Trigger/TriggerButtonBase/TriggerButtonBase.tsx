@@ -23,9 +23,9 @@ export const TriggerButtonBase = ({
     <button
       type="button"
       {...buttonProps}
-      {...restProps}
       ref={buttonRef}
       className={classnames(styles.button, classNameOverride)}
+      {...restProps}
     >
       {children}
 
