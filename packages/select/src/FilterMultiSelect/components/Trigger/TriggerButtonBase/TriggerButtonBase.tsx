@@ -15,7 +15,7 @@ export type TriggerButtonBaseProps = {
 export const TriggerButtonBase = ({
   children,
   classNameOverride,
-  disabled,
+  ...restProps
 }: TriggerButtonBaseProps): JSX.Element => {
   const { buttonProps, buttonRef, menuTriggerState } = useMenuTriggerContext()
 
@@ -23,9 +23,9 @@ export const TriggerButtonBase = ({
     <button
       type="button"
       {...buttonProps}
+      {...restProps}
       ref={buttonRef}
       className={classnames(styles.button, classNameOverride)}
-      disabled={disabled}
     >
       {children}
 
