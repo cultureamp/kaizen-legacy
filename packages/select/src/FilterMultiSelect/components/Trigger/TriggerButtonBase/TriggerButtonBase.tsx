@@ -22,11 +22,11 @@ export const TriggerButtonBase = ({
 
   return (
     <button
-      disabled={disabled}
       type="button"
       {...buttonProps}
       ref={buttonRef}
       className={classnames(styles.button, classNameOverride)}
+      disabled={disabled}
     >
       {children}
 
