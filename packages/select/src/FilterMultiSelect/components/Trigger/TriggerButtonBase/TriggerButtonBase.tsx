@@ -10,16 +10,19 @@ import styles from "./TriggerButtonBase.module.scss"
 export type TriggerButtonBaseProps = {
   children: React.ReactNode
   classNameOverride?: string // TODO: migrate it to use OverrideClassName<T> and omit the props controlled by React-Aria
+  isDisabled?: boolean
 }
 
 export const TriggerButtonBase = ({
   children,
   classNameOverride,
+  isDisabled,
 }: TriggerButtonBaseProps): JSX.Element => {
   const { buttonProps, buttonRef, menuTriggerState } = useMenuTriggerContext()
 
   return (
     <button
+      disabled={isDisabled}
       type="button"
       {...buttonProps}
       ref={buttonRef}
