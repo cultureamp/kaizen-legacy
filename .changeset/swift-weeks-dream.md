@@ -2,4 +2,4 @@
 "@kaizen/select": minor
 ---
 
-fix: add restProps
+fix: add restProps to TriggerButtonBase
