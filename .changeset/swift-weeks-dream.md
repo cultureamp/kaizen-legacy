@@ -2,4 +2,4 @@
 "@kaizen/select": minor
 ---
 
-fix: add disabled prop
+fix: add restProps
