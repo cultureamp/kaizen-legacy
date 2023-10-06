@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.21.0
+
+### Minor Changes
+
+- [#43](https://github.com/cultureamp/kaizen-legacy/pull/43) [`e7c8267`](https://github.com/cultureamp/kaizen-legacy/commit/e7c8267f3c1e9f7e830997fe89ee94087e836803) - fix: add restProps to TriggerButtonBase
+
+### Patch Changes
+
+- Updated dependencies [[`a3aa768`](https://github.com/cultureamp/kaizen-legacy/commit/a3aa7683a0715794c6cfc0d6f162d0f9894ef299)]:
+  - @kaizen/component-library@16.10.0
+
 ## 6.20.4
 
 ### Patch Changes
