@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ButtonHTMLAttributes } from "react"
 import classnames from "classnames"
 import { Icon } from "@kaizen/component-library"
 import chevronDown from "@kaizen/component-library/icons/chevron-down.icon.svg"
@@ -10,11 +10,12 @@ import styles from "./TriggerButtonBase.module.scss"
 export type TriggerButtonBaseProps = {
   children: React.ReactNode
   classNameOverride?: string // TODO: migrate it to use OverrideClassName<T> and omit the props controlled by React-Aria
-}
+} & ButtonHTMLAttributes<HTMLButtonElement>
 
 export const TriggerButtonBase = ({
   children,
   classNameOverride,
+  ...restProps
 }: TriggerButtonBaseProps): JSX.Element => {
   const { buttonProps, buttonRef, menuTriggerState } = useMenuTriggerContext()
 
@@ -24,6 +25,7 @@ export const TriggerButtonBase = ({
       {...buttonProps}
       ref={buttonRef}
       className={classnames(styles.button, classNameOverride)}
+      {...restProps}
     >
       {children}
 
