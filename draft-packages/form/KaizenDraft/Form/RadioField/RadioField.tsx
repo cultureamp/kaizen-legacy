@@ -45,6 +45,14 @@ export const RadioField = ({
         reversed && styles.reversed
       )}
     >
+      <Radio
+        automationId={`${id}-radio-input`}
+        id={id}
+        disabled={disabled}
+        reversed={reversed}
+        selectedStatus={selectedStatus}
+        {...restProps}
+      />
       <Label
         automationId={`${id}-field-label`}
         id={`${id}-field-label`}
@@ -53,16 +61,7 @@ export const RadioField = ({
         labelType="radio"
         disabled={disabled}
         reversed={reversed}
-      >
-        <Radio
-          automationId={`${id}-radio-input`}
-          id={id}
-          disabled={disabled}
-          reversed={reversed}
-          selectedStatus={selectedStatus}
-          {...restProps}
-        />
-      </Label>
+      />
     </div>
   )
 }
