@@ -46,6 +46,14 @@ export const CheckboxField = ({
         noBottomMargin && styles.noBottomMargin
       )}
     >
+      <Checkbox
+        id={`${id}-field-checkbox`}
+        automationId={`${id}-field-checkbox`}
+        disabled={disabled}
+        reversed={reversed}
+        checkedStatus={checkedStatus}
+        {...restProps}
+      />
       <Label
         id={`${id}-field-label`}
         htmlFor={`${id}-field-checkbox`}
@@ -54,16 +62,7 @@ export const CheckboxField = ({
         reversed={reversed}
         labelType="checkbox"
         disabled={disabled}
-      >
-        <Checkbox
-          id={`${id}-field-checkbox`}
-          automationId={`${id}-field-checkbox`}
-          disabled={disabled}
-          reversed={reversed}
-          checkedStatus={checkedStatus}
-          {...restProps}
-        />
-      </Label>
+      />
     </div>
   )
 }

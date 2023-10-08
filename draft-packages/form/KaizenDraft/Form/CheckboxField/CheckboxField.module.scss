@@ -12,6 +12,7 @@
 .container {
   position: relative;
   margin-bottom: $spacing-xs;
+  display: flex;
 
   label {
     // This is to override bootstrap styles. Remove when appropriate
