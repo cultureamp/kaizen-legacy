@@ -1,5 +1,26 @@
 # Change Log
 
+## 6.21.0
+
+### Minor Changes
+
+- [#43](https://github.com/cultureamp/kaizen-legacy/pull/43) [`e7c8267`](https://github.com/cultureamp/kaizen-legacy/commit/e7c8267f3c1e9f7e830997fe89ee94087e836803) - fix: add restProps to TriggerButtonBase
+
+### Patch Changes
+
+- Updated dependencies [[`a3aa768`](https://github.com/cultureamp/kaizen-legacy/commit/a3aa7683a0715794c6cfc0d6f162d0f9894ef299)]:
+  - @kaizen/component-library@16.10.0
+
+## 6.20.4
+
+### Patch Changes
+
+- [#36](https://github.com/cultureamp/kaizen-legacy/pull/36) [`977f943`](https://github.com/cultureamp/kaizen-legacy/commit/977f943fcb1fae0df46085929d3820b80b9dd955) - change margin-left to margin-inline-start
+
+- Updated dependencies [[`e470f4a`](https://github.com/cultureamp/kaizen-legacy/commit/e470f4af97d5d1b3b586516df7c68dd77ec36845), [`d1615e5`](https://github.com/cultureamp/kaizen-legacy/commit/d1615e5271d23608b32b44fbdd155f7445ef46fd)]:
+  - @kaizen/draft-menu@5.1.0
+  - @kaizen/button@3.0.5
+
 ## 6.20.3
 
 ### Patch Changes

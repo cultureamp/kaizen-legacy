@@ -1,5 +1,11 @@
 # Change Log
 
+## 16.10.0
+
+### Minor Changes
+
+- [#44](https://github.com/cultureamp/kaizen-legacy/pull/44) [`a3aa768`](https://github.com/cultureamp/kaizen-legacy/commit/a3aa7683a0715794c6cfc0d6f162d0f9894ef299) - Add new AI icon to legacy component lib
+
 ## 16.9.3
 
 ### Patch Changes
