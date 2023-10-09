@@ -20,8 +20,7 @@ export interface CheckboxGroupProps
 }
 
 /**
- * {@link https://cultureamp.design/components/checkbox-group/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-form-checkbox-group--interactive-kaizen-site-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const CheckboxGroup = ({
   children,

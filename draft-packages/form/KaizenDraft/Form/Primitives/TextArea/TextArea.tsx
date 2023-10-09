@@ -21,6 +21,9 @@ export interface TextAreaProps
   automationId?: string
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const TextArea = ({
   textAreaRef: propsTextAreaRef,
   status = "default",

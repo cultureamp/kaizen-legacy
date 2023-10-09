@@ -19,8 +19,7 @@ export interface CheckboxFieldProps extends Omit<CheckboxProps, "id"> {
 }
 
 /**
- * {@link https://cultureamp.design/components/checkbox-field/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-form-checkbox-field--interactive-kaizen-site-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const CheckboxField = ({
   id: propsId,

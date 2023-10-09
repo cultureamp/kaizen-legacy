@@ -71,6 +71,9 @@ export interface SelectProps
   isReversed?: boolean
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components/future`
+ */
 export const Select = ({
   id: propsId,
   label,

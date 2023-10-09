@@ -11,6 +11,9 @@ export type GlobalNotificationProps = {
   persistent?: boolean
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const GlobalNotification = (
   props: GlobalNotificationProps
 ): JSX.Element => <GenericNotification style="global" {...props} />
