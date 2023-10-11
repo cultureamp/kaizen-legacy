@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.10.13
+
+### Patch Changes
+
+- [#47](https://github.com/cultureamp/kaizen-legacy/pull/47) [`3d76224`](https://github.com/cultureamp/kaizen-legacy/commit/3d76224d54affcfd7e12aa6d0bdf7e1407022953) - Fix too-large font size of long titles on small viewports
+
 ## 7.10.12
 
 ### Patch Changes
