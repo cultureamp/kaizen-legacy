@@ -205,7 +205,13 @@ type TextDirection = "ltr" | "rtl"
 
 type SurveyStatus = {
   text: string
-  status: "draft" | "live" | "scheduled" | "closed" | "default" | "sentimentPositive"
+  status:
+    | "draft"
+    | "live"
+    | "scheduled"
+    | "closed"
+    | "sentimentPositive"
+    | "default"
 }
 
 const renderTag = (surveyStatus: SurveyStatus): JSX.Element | void => {
