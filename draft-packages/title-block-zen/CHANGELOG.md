@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.10.14
+
+### Patch Changes
+
+- [#50](https://github.com/cultureamp/kaizen-legacy/pull/50) [`70c5684`](https://github.com/cultureamp/kaizen-legacy/commit/70c568412abb13f7617cab2f7cc50ef380982ec6) - add sentimentPositive to surveyStatus
+
 ## 7.10.13
 
 ### Patch Changes
