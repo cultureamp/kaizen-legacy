@@ -714,6 +714,8 @@ describe("<TitleBlockZen />", () => {
       ["live", "statusLive"],
       ["closed", "statusClosed"],
       ["scheduled", "statusClosed"],
+      ["sentimentPositive", "sentimentPositive"],
+      ["default", "default"],
     ])(
       "renders tag with correct text and variant when %s status",
       async (status, expectedClassName) => {
@@ -727,6 +729,7 @@ describe("<TitleBlockZen />", () => {
                 | "live"
                 | "scheduled"
                 | "closed"
+                | "sentimentPositive"
                 | "default",
             }}
           >
