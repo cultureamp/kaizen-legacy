@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.5.1
+
+### Patch Changes
+
+- [#49](https://github.com/cultureamp/kaizen-legacy/pull/49) [`0860b51`](https://github.com/cultureamp/kaizen-legacy/commit/0860b5164f9c07c77f83390df83e1327b5fa6ca4) - Generate ID for TextAreaField if id prop not provided
+
 ## 10.5.0
 
 ### Minor Changes
