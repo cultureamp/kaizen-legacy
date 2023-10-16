@@ -6,6 +6,9 @@ export interface ModalAccessibleDescriptionProps {
   children: React.ReactNode
 }
 
+/**
+ * @deprecated Please use the ModalDescription component from `@kaizen/components`
+ */
 export const ModalAccessibleDescription = ({
   children,
 }: ModalAccessibleDescriptionProps): JSX.Element => (

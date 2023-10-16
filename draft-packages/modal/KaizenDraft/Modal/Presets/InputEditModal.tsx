@@ -30,8 +30,7 @@ export interface InputEditModalProps {
 }
 
 /**
- * {@link https://cultureamp.design/components/modal/#input-edit-modal Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-modal-input-edit-modal--input-edit-modal-example Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const InputEditModal = ({
   isOpen,

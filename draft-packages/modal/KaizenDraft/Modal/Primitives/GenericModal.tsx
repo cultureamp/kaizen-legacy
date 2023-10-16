@@ -25,6 +25,9 @@ export interface GenericModalProps
   extends GenericModalContainerProps,
     ModalAccessibleContextType {}
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 const GenericModalContainer = (
   props: GenericModalContainerProps
 ): JSX.Element => {

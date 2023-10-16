@@ -23,6 +23,9 @@ export type ModalFooterProps = Readonly<{
   alignStart?: boolean
 }>
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const ModalFooter = (props: ModalFooterProps): JSX.Element => {
   const {
     unpadded,
