@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.5
+
+### Patch Changes
+
+- [#39](https://github.com/cultureamp/kaizen-legacy/pull/39) [`d1615e5`](https://github.com/cultureamp/kaizen-legacy/commit/d1615e5271d23608b32b44fbdd155f7445ef46fd) - Fix aria-polite presence on buttons without working states.
+  - The aria-live="polite" will only be added when a workingLabel is provided to the button.
+  - This will mean the content should only be read when inner content updates on buttons with working states
+
 ## 3.0.4
 
 ### Patch Changes

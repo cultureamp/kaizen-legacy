@@ -13,6 +13,8 @@ $dropdown-index: 1000;
   color: $color-purple-800;
   border-radius: $border-solid-border-radius;
   box-shadow: $shadow-large-box-shadow;
+  max-height: 22rem;
+  overflow: auto;
   padding: $spacing-xs 0;
   text-align: left;
 
