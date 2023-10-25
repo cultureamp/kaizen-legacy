@@ -1,18 +1,20 @@
 ---
-"@kaizen/draft-collapsible": patch
-"@kaizen/draft-empty-state": patch
-"@kaizen/draft-divider": patch
 "@kaizen/draft-avatar": patch
-"@kaizen/brand-moment": patch
-"@kaizen/notification": patch
 "@kaizen/draft-badge": patch
 "@kaizen/draft-card": patch
+"@kaizen/draft-collapsible": patch
+"@kaizen/draft-divider": patch
+"@kaizen/draft-empty-state": patch
 "@kaizen/draft-form": patch
-"@kaizen/typography": patch
+"@kaizen/draft-illustration": patch
 "@kaizen/draft-tag": patch
-"@kaizen/button": patch
-"@kaizen/select": patch
 "@kaizen/brand": patch
+"@kaizen/brand-moment": patch
+"@kaizen/button": patch
+"@kaizen/date-picker": patch
+"@kaizen/notification": patch
+"@kaizen/select": patch
+"@kaizen/typography": patch
 ---
 
 Deprecations
