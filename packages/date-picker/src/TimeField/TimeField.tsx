@@ -42,6 +42,9 @@ export interface TimeFieldProps
   validationMessage?: React.ReactNode
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 // This needed to be placed directly below the props because
 // the prop descriptions wouldn't show in Storybook otherwise.
 export const TimeField = (props: TimeFieldProps): JSX.Element => (

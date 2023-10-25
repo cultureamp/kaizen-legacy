@@ -50,8 +50,7 @@ export interface DateRangePickerProps extends DisabledDayMatchers {
 }
 
 /**
- * {@link https://cultureamp.design/components/date-range-picker/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-date-picker-date-range-picker--date-range-picker-sticker-sheet Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const DateRangePicker = ({
   id: propsId,
