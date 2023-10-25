@@ -10,13 +10,16 @@ import { Tooltip } from "@kaizen/draft-tooltip"
 import { Heading } from "@kaizen/typography"
 import styles from "./Table.module.scss"
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export type TableContainerProps = {
   children?: React.ReactNode
   variant?: "compact" | "default" | "data"
 }
+
 /**
- * {@link https://cultureamp.design/components/table/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-table--default-kaizen-site-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const TableContainer = ({
   variant = "compact",
@@ -45,6 +48,10 @@ export type TableHeaderProps = {
   backgroundColor?: AllowedTableHeaderBackgroundColors
   children?: React.ReactNode
 }
+
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const TableHeader = ({
   backgroundColor,
   children,
@@ -92,6 +99,9 @@ const ratioToPercent = (width?: number): string | number | undefined =>
  *        shrink, and basis, due to IE11 compatibility. eg. use "1 1 auto"
  *        instead of just "1".
  */
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export type TableHeaderRowCellProps = OverrideClassName<
   HTMLAttributes<HTMLElement>
 > & {
@@ -130,6 +140,9 @@ export type TableHeaderRowCellProps = OverrideClassName<
   sortingArrowsOnHover?: "ascending" | "descending" | undefined
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const TableHeaderRowCell = ({
   labelText,
   automationId,
@@ -331,6 +344,9 @@ type AnchorClickEvent = (e: React.MouseEvent<HTMLAnchorElement>) => void
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role
  */
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export type TableCardProps = OverrideClassName<HTMLAttributes<HTMLElement>> & {
   onClick?: ButtonClickEvent | AnchorClickEvent
   expanded?: boolean
@@ -343,6 +359,9 @@ export type TableCardProps = OverrideClassName<HTMLAttributes<HTMLElement>> & {
   children?: React.ReactNode
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const TableCard = ({
   children,
   expanded,
@@ -392,9 +411,16 @@ export const TableCard = ({
  *
  * @param {*} { children, classNameOverride, ...otherProps }
  */
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export type TableRowProps = OverrideClassName<HTMLAttributes<HTMLElement>> & {
   children?: React.ReactNode
 }
+
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const TableRow = ({
   children,
   classNameOverride,
@@ -415,6 +441,9 @@ export const TableRow = ({
  *        shrink, and basis, due to IE11 compatibility. eg. use "1 1 auto"
  *        instead of just "1".
  */
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export type TableRowCellProps = OverrideClassName<
   HTMLAttributes<HTMLElement>
 > & {
@@ -423,7 +452,9 @@ export type TableRowCellProps = OverrideClassName<
   flex?: string
   href?: string
 }
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const TableRowCell = ({
   children,
   width,
