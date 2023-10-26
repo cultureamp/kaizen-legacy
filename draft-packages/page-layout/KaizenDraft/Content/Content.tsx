@@ -39,8 +39,7 @@ export interface ContentProps
 }
 
 /**
- * {@link https://cultureamp.design/components/page-layout/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-page-layout--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Container = React.forwardRef<HTMLDivElement, ContentProps>(
   ({ children, style, automationId, classNameOverride, ...restProps }, ref) => (
@@ -59,8 +58,7 @@ export const Container = React.forwardRef<HTMLDivElement, ContentProps>(
 Container.displayName = "Container"
 
 /**
- * {@link https://cultureamp.design/components/page-layout/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-page-layout--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Content = React.forwardRef<HTMLDivElement, ContentProps>(
   ({ children, style, automationId, classNameOverride, ...restProps }, ref) => (
