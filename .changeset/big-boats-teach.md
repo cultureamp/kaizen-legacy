@@ -8,6 +8,7 @@
 "@kaizen/draft-form": patch
 "@kaizen/draft-illustration": patch
 "@kaizen/draft-page-layout": patch
+"@kaizen/draft-table": patch
 "@kaizen/draft-tag": patch
 "@kaizen/brand": patch
 "@kaizen/brand-moment": patch
