@@ -25,8 +25,7 @@ export enum PageAction {
 }
 
 /**
- * {@link https://cultureamp.design/components/pagination/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-pagination--default Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Pagination = ({
   currentPage = 1,

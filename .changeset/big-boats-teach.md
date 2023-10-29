@@ -18,6 +18,7 @@
 "@kaizen/button": patch
 "@kaizen/date-picker": patch
 "@kaizen/notification": patch
+"@kaizen/pagination": patch
 "@kaizen/select": patch
 "@kaizen/typography": patch
 ---
