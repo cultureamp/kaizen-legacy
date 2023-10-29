@@ -12,6 +12,7 @@
 "@kaizen/draft-table": patch
 "@kaizen/draft-tag": patch
 "@kaizen/draft-title-block-zen": patch
+"@kaizen/draft-tooltip": patch
 "@kaizen/brand": patch
 "@kaizen/brand-moment": patch
 "@kaizen/button": patch
