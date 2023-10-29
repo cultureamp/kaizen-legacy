@@ -559,7 +559,9 @@ const createTabletOverflowMenuItems = (
  * The order of elements in the array will determine the visual order on the page, so
  * please be aware of the intended order mentioned above.
  */
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const TitleBlockZen = ({
   title,
   variant,

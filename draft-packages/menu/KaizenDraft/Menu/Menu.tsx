@@ -24,8 +24,7 @@ export type MenuProps = Omit<
 }
 
 /**
- * {@link https://cultureamp.design/components/menu/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-menu--auto-hide-behaviours Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Menu = ({
   button,

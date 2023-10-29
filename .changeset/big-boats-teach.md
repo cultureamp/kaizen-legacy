@@ -7,9 +7,11 @@
 "@kaizen/draft-empty-state": patch
 "@kaizen/draft-form": patch
 "@kaizen/draft-illustration": patch
+"@kaizen/draft-menu": patch
 "@kaizen/draft-page-layout": patch
 "@kaizen/draft-table": patch
 "@kaizen/draft-tag": patch
+"@kaizen/draft-title-block-zen": patch
 "@kaizen/brand": patch
 "@kaizen/brand-moment": patch
 "@kaizen/button": patch
