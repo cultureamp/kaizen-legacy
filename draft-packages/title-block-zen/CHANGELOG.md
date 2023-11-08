@@ -1,5 +1,17 @@
 # Change Log
 
+## 7.10.14
+
+### Patch Changes
+
+- [#50](https://github.com/cultureamp/kaizen-legacy/pull/50) [`70c5684`](https://github.com/cultureamp/kaizen-legacy/commit/70c568412abb13f7617cab2f7cc50ef380982ec6) - add sentimentPositive to surveyStatus
+
+## 7.10.13
+
+### Patch Changes
+
+- [#47](https://github.com/cultureamp/kaizen-legacy/pull/47) [`3d76224`](https://github.com/cultureamp/kaizen-legacy/commit/3d76224d54affcfd7e12aa6d0bdf7e1407022953) - Fix too-large font size of long titles on small viewports
+
 ## 7.10.12
 
 ### Patch Changes

@@ -198,13 +198,16 @@ $tab-container-height-medium-and-small-collapsed: 0;
     }
   }
 
-  @include title-block-medium-and-small {
-    font-family: $typography-heading-4-font-family;
-    font-weight: $typography-heading-4-font-weight;
-    font-size: $typography-heading-4-font-size;
-    line-height: $typography-heading-4-line-height;
-    letter-spacing: $typography-heading-4-letter-spacing;
-    padding: 0;
+  &,
+  .hasLongTitle & {
+    @include title-block-medium-and-small {
+      font-family: $typography-heading-4-font-family;
+      font-weight: $typography-heading-4-font-weight;
+      font-size: $typography-heading-4-font-size;
+      line-height: $typography-heading-4-line-height;
+      letter-spacing: $typography-heading-4-letter-spacing;
+      padding: 0;
+    }
   }
 }
 

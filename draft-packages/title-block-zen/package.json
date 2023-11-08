@@ -1,6 +1,6 @@
 {
   "name": "@kaizen/draft-title-block-zen",
-  "version": "7.10.12",
+  "version": "7.10.14",
   "description": "The draft Title Block (Zen) component",
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",

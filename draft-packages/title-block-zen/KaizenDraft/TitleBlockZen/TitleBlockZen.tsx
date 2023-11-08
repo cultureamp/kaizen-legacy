@@ -205,7 +205,13 @@ type TextDirection = "ltr" | "rtl"
 
 type SurveyStatus = {
   text: string
-  status: "draft" | "live" | "scheduled" | "closed" | "default"
+  status:
+    | "draft"
+    | "live"
+    | "scheduled"
+    | "closed"
+    | "sentimentPositive"
+    | "default"
 }
 
 const renderTag = (surveyStatus: SurveyStatus): JSX.Element | void => {
@@ -236,6 +242,10 @@ const renderTag = (surveyStatus: SurveyStatus): JSX.Element | void => {
 
   if (surveyStatus.status === "closed") {
     tagVariant = "statusClosed"
+  }
+
+  if (surveyStatus.status === "sentimentPositive") {
+    tagVariant = "sentimentPositive"
   }
 
   if (surveyStatus.status === "default") {
