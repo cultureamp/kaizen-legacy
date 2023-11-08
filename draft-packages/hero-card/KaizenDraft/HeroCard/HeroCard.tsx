@@ -23,7 +23,7 @@ export interface HeroCardProps
 
 /**
  * @deprecated HeroCard is deprecated.
- * No further changes will be made to it as it will be superseded by Tile.
+ * No further changes will be made to it as it will be superseded by Tile from `@kaizen/components`
  */
 export const HeroCard = ({
   children,
