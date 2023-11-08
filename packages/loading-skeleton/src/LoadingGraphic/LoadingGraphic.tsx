@@ -28,6 +28,9 @@ export interface LoadingGraphicProps
   size: GraphicSizes
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const LoadingGraphic = ({
   isAnimated,
   isReversed,

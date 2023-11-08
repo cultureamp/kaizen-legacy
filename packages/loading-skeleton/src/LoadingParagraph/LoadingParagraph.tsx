@@ -19,6 +19,9 @@ export interface LoadingParagraphProps
   width?: number
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const LoadingParagraph = ({
   isAnimated,
   isCentred,

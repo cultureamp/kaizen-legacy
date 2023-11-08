@@ -16,8 +16,7 @@ export interface LoadingSpinnerProps
 }
 
 /**
- * {@link https://cultureamp.design/components/loading-spinner/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-loading-spinner--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const LoadingSpinner = ({
   children: _children, // not used
