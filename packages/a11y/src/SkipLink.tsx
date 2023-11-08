@@ -15,7 +15,7 @@ export interface SkipLinkProps {
 }
 
 /**
- * The skip link should be the first focusable element in the page.
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const SkipLink = ({ label, skipTo }: SkipLinkProps): JSX.Element => (
   <a className={styles.skipLinkContainer} href={`#${skipTo}`}>
