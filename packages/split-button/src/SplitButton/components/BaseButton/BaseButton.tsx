@@ -15,7 +15,9 @@ export type BaseButtonProps = OverrideClassName<AnchorButtonAttributes> & {
   icon?: React.SVGAttributes<SVGSymbolElement>
   isReversed?: boolean
 }
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const BaseButton = ({
   label,
   icon,

@@ -6,7 +6,9 @@ import { BaseButton, BaseButtonProps } from "../BaseButton"
 import styles from "./DropdownButton.module.scss"
 
 export type DropdownButtonProps = Omit<BaseButtonProps, "label" | "icon">
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const DropdownButton = ({
   classNameOverride,
   "aria-label": ariaLabel,

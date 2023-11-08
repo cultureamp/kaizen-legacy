@@ -29,8 +29,7 @@ const SelectedItemIcon = (): JSX.Element => (
 )
 
 /**
- * {@link https://cultureamp.design/components/likert-scale/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-likert-scale--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const LikertScaleLegacy = ({
   scale,

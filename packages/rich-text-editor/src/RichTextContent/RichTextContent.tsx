@@ -14,7 +14,9 @@ export interface RichTextContentProps
   extends OverrideClassName<Omit<HTMLAttributes<HTMLDivElement>, "content">> {
   content: EditorContentArray
 }
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const RichTextContent = (props: RichTextContentProps): JSX.Element => {
   const { content, classNameOverride, ...restProps } = props
   const [schema] = useState<ProseMirrorModel.Schema>(createSchemaWithAll())

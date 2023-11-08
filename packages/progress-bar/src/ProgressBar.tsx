@@ -32,8 +32,7 @@ function calculatePercentage({
 }
 
 /**
- * {@link https://cultureamp.design/components/progress-bar/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-progress-bar--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const ProgressBar = ({
   value,

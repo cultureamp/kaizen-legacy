@@ -47,6 +47,9 @@ const handleKeyDown = (
   toolbarButtons.current[newFocusIndex].focus()
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Toolbar = (props: ToolbarProps): JSX.Element => {
   const {
     children: toolbarChildren,

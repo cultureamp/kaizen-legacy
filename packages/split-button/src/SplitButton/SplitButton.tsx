@@ -47,8 +47,7 @@ export interface SplitButtonProps
 }
 
 /**
- * {@link https://cultureamp.design/components/split-button/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-split-button--default-kaizen-site-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const SplitButton = ({
   actionButtonProps,

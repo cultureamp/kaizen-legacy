@@ -16,7 +16,9 @@ type FilterSplitButtonProps = {
   ariaControls: string
   isDropdownVisible: boolean
 }
-
+/**
+ * @deprecated draft-packages FilterSplitButton is deprecated. Please use FilterMultiSelect from "@kaizen/components" instead.
+ */
 export const FilterSplitButton = ({
   labelText,
   metadata,

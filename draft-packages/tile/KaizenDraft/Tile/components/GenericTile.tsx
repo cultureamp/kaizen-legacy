@@ -40,7 +40,9 @@ export interface GenericTileProps
     | "prominent"
   footer: React.ReactNode
 }
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const GenericTile = ({
   children,
   title,

@@ -31,6 +31,9 @@ const handleEditableClick = (
   return onClick(e)
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const EditableRichTextContent = (
   props: EditableRichTextContentProps
 ): JSX.Element => {
