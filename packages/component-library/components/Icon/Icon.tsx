@@ -18,8 +18,7 @@ export interface IconProps
 }
 
 /**
- * {@link https://cultureamp.design/components/icon/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-icon--meaningful-kaizen-site-demo Storybook}
+ * @deprecated Replace with individual React icons. See: {@link https://cultureamp.design/?path=/docs/components-icons--docs Reference}
  */
 export const Icon = ({
   icon,

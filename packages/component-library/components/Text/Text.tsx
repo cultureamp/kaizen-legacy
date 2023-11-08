@@ -36,7 +36,7 @@ type TextProps = {
 }
 
 /**
- * @deprecated Text is deprecated. Use Paragraph or Heading instead.
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 const Text = ({
   tag,

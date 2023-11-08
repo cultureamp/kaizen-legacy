@@ -15,7 +15,7 @@ export interface BoxProps
 }
 
 /**
- * {@link https://cultureamp.design/storybook/?path=/docs/components-box--box-default Storybook}
+ * @deprecated Please replace with `div` plus Tailwind.
  */
 export const Box = ({
   children,
