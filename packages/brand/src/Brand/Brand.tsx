@@ -14,6 +14,9 @@ export interface BrandProps
   reversed?: boolean
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Brand = ({
   variant,
   alt,

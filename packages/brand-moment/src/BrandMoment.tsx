@@ -25,6 +25,9 @@ export interface BrandMomentProps
   }
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const BrandMoment = ({
   mood,
   illustration,

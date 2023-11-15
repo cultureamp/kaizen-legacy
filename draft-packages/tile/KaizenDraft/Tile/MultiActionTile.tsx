@@ -28,8 +28,7 @@ const renderActions = (
 )
 
 /**
- * {@link https://cultureamp.design/components/tile/#multiactiontile Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-tile--multi-action Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const MultiActionTile = ({
   children,

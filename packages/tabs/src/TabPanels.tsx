@@ -5,7 +5,7 @@ export interface TabPanelsProps {
 }
 
 /**
- * Wrapper for the content panels
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const TabPanels = (props: TabPanelsProps): JSX.Element => {
   const { children } = props

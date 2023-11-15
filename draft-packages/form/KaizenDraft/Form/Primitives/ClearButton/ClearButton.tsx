@@ -13,6 +13,9 @@ export interface ClearButtonProps
   isReversed?: boolean
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const ClearButton = ({
   classNameOverride,
   isReversed = false,

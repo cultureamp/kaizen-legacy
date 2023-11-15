@@ -42,8 +42,7 @@ export interface ParagraphProps
 }
 
 /**
- * {@link https://cultureamp.design/components/paragraph/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-typography-paragraph--body Storybook}
+ * @deprecated Please use the `Text` component from `@kaizen/components`
  */
 export const Paragraph = ({
   children,

@@ -51,8 +51,7 @@ export interface HeadingProps
 }
 
 /**
- * {@link https://cultureamp.design/components/heading/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-typography-heading--display-0 Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Heading = ({
   children,

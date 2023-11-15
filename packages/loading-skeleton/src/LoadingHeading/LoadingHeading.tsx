@@ -17,6 +17,9 @@ export interface LoadingHeadingProps
   width?: number
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const LoadingHeading = ({
   isAnimated,
   isReversed,

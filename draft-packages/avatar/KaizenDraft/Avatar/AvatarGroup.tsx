@@ -67,8 +67,7 @@ const renderAvatars = (
 )
 
 /**
- * {@link https://cultureamp.design/components/avatar-group/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-avatar-avatar-group--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const AvatarGroup = ({
   size = "medium",

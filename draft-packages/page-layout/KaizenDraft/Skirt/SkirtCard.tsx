@@ -5,6 +5,9 @@ import styles from "./SkirtCard.module.scss"
 
 export type SkirtCardProps = CardProps
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkirtCard = (props: SkirtCardProps): JSX.Element => {
   const { classNameOverride, ...restProps } = props
   return (

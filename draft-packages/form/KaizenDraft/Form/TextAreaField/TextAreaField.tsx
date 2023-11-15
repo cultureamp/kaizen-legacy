@@ -20,8 +20,7 @@ export interface TextAreaFieldProps
 }
 
 /**
- * {@link https://cultureamp.design/components/text-area-field/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-form-text-area-field--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const TextAreaField = ({
   labelText,

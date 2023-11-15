@@ -15,8 +15,7 @@ export interface TileGridProps
 }
 
 /**
- * {@link https://cultureamp.design/components/tile/#tilegrid Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-tile--tile-grid-with-tiles Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const TileGrid = ({
   children,

@@ -4,7 +4,7 @@ import { FilterSplitButton } from "./FilterSplitButton"
 import styles from "./FilterMenuButton.module.scss"
 
 /**
- * @deprecated draft-packages FilterMenuButton is deprecated. Please use FilterMultiSelect from "@kaizen/select" instead.
+ * @deprecated draft-packages FilterMenuButton is deprecated. Please use FilterMultiSelect from "@kaizen/components" instead.
  */
 export interface FilterMenuButtonProps {
   /* The html id attribute of the container element. This is also used
@@ -55,7 +55,9 @@ export interface FilterMenuButtonProps {
    */
   onFilterClear?: (e: React.MouseEvent<any>) => void
 }
-
+/**
+ * @deprecated draft-packages FilterMenuButton is deprecated. Please use FilterMultiSelect from "@kaizen/components" instead.
+ */
 export const FilterMenuButton = ({
   id,
   labelText,

@@ -7,6 +7,9 @@ export interface GenericModalSectionProps {
   readonly children: React.ReactNode
 }
 
+/**
+ * @deprecated Please use the ModalSection component from `@kaizen/components`
+ */
 const GenericModalSection = ({
   inputEdit = false,
   children,

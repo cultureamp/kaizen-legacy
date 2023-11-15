@@ -21,6 +21,9 @@ export interface LabelProps
   automationId?: string
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Label = ({
   children,
   labelText = "",

@@ -24,8 +24,7 @@ export type IconButtonProps = GenericProps &
   }
 
 /**
- * {@link https://cultureamp.design/components/icon-button/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-button--default-kaizen-demo-icon Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const IconButton = (props: IconButtonProps): JSX.Element => (
   <GenericButton iconButton {...props} />

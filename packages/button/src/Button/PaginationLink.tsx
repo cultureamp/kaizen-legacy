@@ -9,8 +9,7 @@ export interface PaginationLinkProps extends GenericProps {
 }
 
 /**
- * {@link https://cultureamp.design/components/pagination/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/story/components-button-pagination-buttons--default-kaizen-pagination-link Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const PaginationLink = (props: PaginationLinkProps): JSX.Element => (
   <GenericButton

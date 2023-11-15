@@ -6,7 +6,9 @@ type GenericChildrenType = { children?: ReactNode }
 
 export const subtractOnePixel = (breakpoint: string): string =>
   `${parseInt(breakpoint, 10) - 1}px`
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const useMediaQueries = (
   propQueries: Props = {}
 ): {

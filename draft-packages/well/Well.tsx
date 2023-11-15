@@ -28,8 +28,7 @@ export interface WellProps
 }
 
 /**
- * {@link https://cultureamp.design/components/well/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-well--assertive Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Well = ({
   children,

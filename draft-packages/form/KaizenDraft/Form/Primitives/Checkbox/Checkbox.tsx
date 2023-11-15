@@ -39,6 +39,9 @@ const renderCheckOrMixedIcon = (
 const getCheckedFromStatus = (checkedStatus: CheckedStatus): boolean =>
   checkedStatus === "on"
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Checkbox = ({
   checkedStatus = "off",
   onCheck,

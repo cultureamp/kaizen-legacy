@@ -16,7 +16,7 @@ export interface TabListProps {
 }
 
 /**
- * Wrapper for the tabs themselves
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const TabList = (props: TabListProps): JSX.Element => {
   const { "aria-label": ariaLabel, noPadding = false, children } = props

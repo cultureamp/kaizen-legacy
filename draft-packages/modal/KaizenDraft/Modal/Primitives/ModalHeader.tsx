@@ -11,6 +11,9 @@ export interface ModalHeaderProps {
   readonly children: React.ReactNode
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 class ModalHeader extends React.Component<ModalHeaderProps> {
   render(): JSX.Element {
     const { reversed, onDismiss, children } = this.props

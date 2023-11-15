@@ -18,6 +18,9 @@ export interface LoadingInputProps
   height?: number
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const LoadingInput = ({
   isAnimated,
   isReversed,

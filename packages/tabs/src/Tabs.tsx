@@ -26,10 +26,7 @@ export interface TabsProps {
 }
 
 /**
- * {@link https://cultureamp.design/components/tabs/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-tabs--controlled Storybook}
- *
- * Wrapper around the whole thing: holds a tab list and tab panels
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Tabs = (props: TabsProps): JSX.Element => {
   const {

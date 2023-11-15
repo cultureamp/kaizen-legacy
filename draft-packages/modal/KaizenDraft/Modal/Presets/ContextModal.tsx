@@ -43,8 +43,7 @@ export type ContextModalProps = Readonly<
 >
 
 /**
- * {@link https://cultureamp.design/components/modal/#context-modals-previously-information-modal Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-modal--context-modal-example Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const ContextModal = ({
   isOpen,

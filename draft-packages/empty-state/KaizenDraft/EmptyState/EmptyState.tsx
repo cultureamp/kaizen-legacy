@@ -55,8 +55,7 @@ export interface EmptyStateProps
 }
 
 /**
- * {@link https://cultureamp.design/components/empty-state/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-empty-state--default-kaizen-site-demo Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const EmptyState = ({
   children,

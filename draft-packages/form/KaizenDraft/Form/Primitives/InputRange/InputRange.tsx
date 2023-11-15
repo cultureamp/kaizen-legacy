@@ -15,6 +15,9 @@ export interface InputRangeProps
   max?: number
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InputRange = (props: InputRangeProps): JSX.Element => {
   const {
     id,

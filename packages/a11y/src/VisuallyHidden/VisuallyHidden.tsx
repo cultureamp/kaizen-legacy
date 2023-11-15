@@ -13,6 +13,9 @@ export interface VisuallyHiddenProps
   tag?: AllowedTags
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const VisuallyHidden = ({
   children,
   classNameOverride,

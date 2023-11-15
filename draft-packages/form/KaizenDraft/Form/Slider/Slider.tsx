@@ -17,8 +17,7 @@ export interface SliderFieldProps extends Omit<InputRangeProps, "id"> {
 }
 
 /**
- * {@link https://cultureamp.design/components/slider/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-form-slider--controlled Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Slider = (props: SliderFieldProps): JSX.Element => {
   const {

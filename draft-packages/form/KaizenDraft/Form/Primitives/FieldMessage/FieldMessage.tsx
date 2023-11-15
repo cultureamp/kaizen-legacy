@@ -22,6 +22,9 @@ export interface FieldMessageProps
   automationId?: string
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const FieldMessage = ({
   message,
   status = "default",

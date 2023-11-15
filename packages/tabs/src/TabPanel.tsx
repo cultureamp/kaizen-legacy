@@ -7,7 +7,7 @@ export interface TabPanelProps {
 }
 
 /**
- * Wrapper for the content that shows when tab is active
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const TabPanel = (props: TabPanelProps): JSX.Element => {
   const { children } = props

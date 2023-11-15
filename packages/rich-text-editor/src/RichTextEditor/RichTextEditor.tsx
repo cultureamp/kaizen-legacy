@@ -58,8 +58,7 @@ interface RTEWithLabelledBy extends BaseRichTextEditorProps {
 
 export type RichTextEditorProps = RTEWithLabelText | RTEWithLabelledBy
 /**
- * {@link https://cultureamp.design/components/rich-text-editor/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-rich-text-editor--default Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const RichTextEditor = (props: RichTextEditorProps): JSX.Element => {
   const {

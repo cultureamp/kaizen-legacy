@@ -21,6 +21,9 @@ export interface ToggleIconButtonProps
     | "secondary-destructive"
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const ToggleIconButton = React.forwardRef<
   HTMLButtonElement,
   ToggleIconButtonProps

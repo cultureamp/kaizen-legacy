@@ -21,7 +21,7 @@ export interface TabProps {
 }
 
 /**
- * A tab button
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Tab = (props: TabProps): JSX.Element => {
   const { isSelected, badge, disabled, children } = props

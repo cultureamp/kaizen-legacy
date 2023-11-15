@@ -20,6 +20,9 @@ export interface SkirtProps extends ContentProps {
   titleBlockHasNavigation?: boolean
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Skirt = ({
   children,
   className,

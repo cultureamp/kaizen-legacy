@@ -26,7 +26,9 @@ interface NotAnimatedProps extends BaseAnimatedSceneProps {
 export type AnimatedSceneProps = AnimatedProps | NotAnimatedProps
 
 // Brand Moments
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const BrandMomentPositiveOutro = ({
   isAnimated,
   enableAspectRatio,
@@ -53,7 +55,9 @@ export const BrandMomentPositiveOutro = ({
   )
 }
 BrandMomentPositiveOutro.displayName = "BrandMomentPositiveOutro"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const BrandMomentLogin = ({
   isAnimated,
   enableAspectRatio,
@@ -80,7 +84,9 @@ export const BrandMomentLogin = ({
   )
 }
 BrandMomentLogin.displayName = "BrandMomentLogin"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const BrandMomentError = ({
   isAnimated,
   enableAspectRatio,
@@ -107,7 +113,9 @@ export const BrandMomentError = ({
   )
 }
 BrandMomentError.displayName = "BrandMomentError"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const BrandMomentNewAccountOnboarding = ({
   enableAspectRatio,
   ...props
@@ -119,7 +127,9 @@ export const BrandMomentNewAccountOnboarding = ({
   />
 )
 BrandMomentNewAccountOnboarding.displayName = "BrandMomentNewAccountOnboarding"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const BrandMomentUploadEmployeeData = ({
   enableAspectRatio,
   ...props
@@ -131,7 +141,9 @@ export const BrandMomentUploadEmployeeData = ({
   />
 )
 BrandMomentUploadEmployeeData.displayName = "BrandMomentUploadEmployeeData"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const BrandMomentStarterKit = ({
   enableAspectRatio,
   ...props
@@ -145,7 +157,9 @@ export const BrandMomentStarterKit = ({
 BrandMomentStarterKit.displayName = "BrandMomentStarterKit"
 
 // Empty States
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const EmptyStatesAction = ({
   isAnimated,
   enableAspectRatio,
@@ -172,7 +186,9 @@ export const EmptyStatesAction = ({
   )
 }
 EmptyStatesAction.displayName = "EmptyStatesAction"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const EmptyStatesInformative = ({
   isAnimated,
   enableAspectRatio,
@@ -199,7 +215,9 @@ export const EmptyStatesInformative = ({
   )
 }
 EmptyStatesInformative.displayName = "EmptyStatesInformative"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const EmptyStatesNegative = ({
   isAnimated,
   enableAspectRatio,
@@ -226,7 +244,9 @@ export const EmptyStatesNegative = ({
   )
 }
 EmptyStatesNegative.displayName = "EmptyStatesNegative"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const EmptyStatesPositive = ({
   isAnimated,
   enableAspectRatio,
@@ -253,7 +273,9 @@ export const EmptyStatesPositive = ({
   )
 }
 EmptyStatesPositive.displayName = "EmptyStatesPositive"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const EmptyStatesNeutral = ({
   isAnimated,
   enableAspectRatio,
@@ -282,7 +304,9 @@ export const EmptyStatesNeutral = ({
 EmptyStatesNeutral.displayName = "EmptyStatesNeutral"
 
 // Information Modals
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Information360Upgrade = ({
   enableAspectRatio,
   ...props
@@ -294,7 +318,9 @@ export const Information360Upgrade = ({
   />
 )
 Information360Upgrade.displayName = "Information360Upgrade"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InformationDemographicFocus = ({
   enableAspectRatio,
   ...props
@@ -306,7 +332,9 @@ export const InformationDemographicFocus = ({
   />
 )
 InformationDemographicFocus.displayName = "InformationDemographicFocus"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InformationTurnoverCalculator = ({
   enableAspectRatio,
   ...props
@@ -318,7 +346,9 @@ export const InformationTurnoverCalculator = ({
   />
 )
 InformationTurnoverCalculator.displayName = "InformationTurnoverCalculator"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InformationTurnoverForecast = ({
   enableAspectRatio,
   ...props
@@ -330,7 +360,9 @@ export const InformationTurnoverForecast = ({
   />
 )
 InformationTurnoverForecast.displayName = "InformationTurnoverForecast"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InformationEmergingTrends = ({
   enableAspectRatio,
   ...props
@@ -342,7 +374,9 @@ export const InformationEmergingTrends = ({
   />
 )
 InformationEmergingTrends.displayName = "InformationEmergingTrends"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InformationEmployeeLifecycle = ({
   enableAspectRatio,
   ...props
@@ -354,7 +388,9 @@ export const InformationEmployeeLifecycle = ({
   />
 )
 InformationEmployeeLifecycle.displayName = "InformationEmployeeLifecycle"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InformationReportOwner = ({
   enableAspectRatio,
   ...props
@@ -366,7 +402,9 @@ export const InformationReportOwner = ({
   />
 )
 InformationReportOwner.displayName = "InformationReportOwner"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const InformationReportOwnerByRule = ({
   enableAspectRatio,
   ...props
@@ -380,7 +418,9 @@ export const InformationReportOwnerByRule = ({
 InformationReportOwnerByRule.displayName = "InformationReportOwnerByRule"
 
 // Miscellaneous
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Collaboration = ({
   enableAspectRatio,
   ...props
@@ -392,7 +432,9 @@ export const Collaboration = ({
   />
 )
 Collaboration.displayName = "Collaboration"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Communication = ({
   enableAspectRatio,
   ...props
@@ -404,7 +446,9 @@ export const Communication = ({
   />
 )
 Communication.displayName = "Communication"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const CompanyValues = ({
   enableAspectRatio,
   ...props
@@ -416,7 +460,9 @@ export const CompanyValues = ({
   />
 )
 CompanyValues.displayName = "CompanyValues"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const ConnectTheDots = ({
   enableAspectRatio,
   ...props
@@ -428,7 +474,9 @@ export const ConnectTheDots = ({
   />
 )
 ConnectTheDots.displayName = "ConnectTheDots"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const CultureLab = ({
   enableAspectRatio,
   ...props
@@ -440,7 +488,9 @@ export const CultureLab = ({
   />
 )
 CultureLab.displayName = "CultureLab"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const TermsAgreement = ({
   enableAspectRatio,
   ...props
@@ -454,7 +504,9 @@ export const TermsAgreement = ({
 TermsAgreement.displayName = "TermsAgreement"
 
 // Skills Coach
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoach1On1Meetings = ({
   enableAspectRatio,
   ...props
@@ -466,7 +518,9 @@ export const SkillsCoach1On1Meetings = ({
   />
 )
 SkillsCoach1On1Meetings.displayName = "SkillsCoach1On1Meetings"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachCoaching = ({
   enableAspectRatio,
   ...props
@@ -478,7 +532,9 @@ export const SkillsCoachCoaching = ({
   />
 )
 SkillsCoachCoaching.displayName = "SkillsCoachCoaching"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachEmployeeDevelopment = ({
   enableAspectRatio,
   ...props
@@ -490,7 +546,9 @@ export const SkillsCoachEmployeeDevelopment = ({
   />
 )
 SkillsCoachEmployeeDevelopment.displayName = "SkillsCoachEmployeeDevelopment"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachEssentialFeedback = ({
   enableAspectRatio,
   ...props
@@ -502,7 +560,9 @@ export const SkillsCoachEssentialFeedback = ({
   />
 )
 SkillsCoachEssentialFeedback.displayName = "SkillsCoachEssentialFeedback"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachEssentialProductivity = ({
   enableAspectRatio,
   ...props
@@ -515,7 +575,9 @@ export const SkillsCoachEssentialProductivity = ({
 )
 SkillsCoachEssentialProductivity.displayName =
   "SkillsCoachEssentialProductivity"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachEssentialResilience = ({
   enableAspectRatio,
   ...props
@@ -527,7 +589,9 @@ export const SkillsCoachEssentialResilience = ({
   />
 )
 SkillsCoachEssentialResilience.displayName = "SkillsCoachEssentialResilience"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachInfluentialCommunication = ({
   enableAspectRatio,
   ...props
@@ -540,7 +604,9 @@ export const SkillsCoachInfluentialCommunication = ({
 )
 SkillsCoachInfluentialCommunication.displayName =
   "SkillsCoachInfluentialCommunication"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachLeadingChange = ({
   enableAspectRatio,
   ...props
@@ -552,7 +618,9 @@ export const SkillsCoachLeadingChange = ({
   />
 )
 SkillsCoachLeadingChange.displayName = "SkillsCoachLeadingChange"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachFeedback = ({
   enableAspectRatio,
   ...props
@@ -564,7 +632,9 @@ export const SkillsCoachFeedback = ({
   />
 )
 SkillsCoachFeedback.displayName = "SkillsCoachFeedback"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachManagerHub = ({
   enableAspectRatio,
   ...props
@@ -576,7 +646,9 @@ export const SkillsCoachManagerHub = ({
   />
 )
 SkillsCoachManagerHub.displayName = "SkillsCoachManagerHub"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachProductivity = ({
   enableAspectRatio,
   ...props
@@ -588,7 +660,9 @@ export const SkillsCoachProductivity = ({
   />
 )
 SkillsCoachProductivity.displayName = "SkillsCoachProductivity"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachRemoteManager = ({
   enableAspectRatio,
   ...props
@@ -600,7 +674,9 @@ export const SkillsCoachRemoteManager = ({
   />
 )
 SkillsCoachRemoteManager.displayName = "SkillsCoachRemoteManager"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachResilience = ({
   enableAspectRatio,
   ...props
@@ -612,7 +688,9 @@ export const SkillsCoachResilience = ({
   />
 )
 SkillsCoachResilience.displayName = "SkillsCoachResilience"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SkillsCoachStrategy = ({
   enableAspectRatio,
   ...props
@@ -626,7 +704,9 @@ export const SkillsCoachStrategy = ({
 SkillsCoachStrategy.displayName = "SkillsCoachStrategy"
 
 // Engagement
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Programs = ({
   enableAspectRatio,
   ...props
@@ -638,7 +718,9 @@ export const Programs = ({
   />
 )
 Programs.displayName = "Programs"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const EngagementSurveySummaryFemale = ({
   enableAspectRatio,
   ...props
@@ -650,7 +732,9 @@ export const EngagementSurveySummaryFemale = ({
   />
 )
 EngagementSurveySummaryFemale.displayName = "EngagementSurveySummaryFemale"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const EngagementSurveySummaryMale = ({
   enableAspectRatio,
   ...props
@@ -662,7 +746,9 @@ export const EngagementSurveySummaryMale = ({
   />
 )
 EngagementSurveySummaryMale.displayName = "EngagementSurveySummaryMale"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SurveyOverviewClosed = ({
   enableAspectRatio,
   ...props
@@ -674,7 +760,9 @@ export const SurveyOverviewClosed = ({
   />
 )
 SurveyOverviewClosed.displayName = "SurveyOverviewClosed"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const SurveyGetStarted = ({
   enableAspectRatio,
   ...props
@@ -686,7 +774,9 @@ export const SurveyGetStarted = ({
   />
 )
 SurveyGetStarted.displayName = "SurveyGetStarted"
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const PerformanceCompanySettings = ({
   enableAspectRatio,
   ...props

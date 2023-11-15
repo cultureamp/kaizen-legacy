@@ -8,6 +8,9 @@ export interface ModalAccessibleLabelProps {
   readonly isProminent?: boolean
 }
 
+/**
+ * @deprecated Please use the ModalLabel component from `@kaizen/components`
+ */
 export const ModalAccessibleLabel = ({
   children,
   isProminent = false,

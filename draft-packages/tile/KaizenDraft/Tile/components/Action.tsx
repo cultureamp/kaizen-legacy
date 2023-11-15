@@ -7,7 +7,9 @@ interface ActionProps {
   readonly secondary?: boolean
   readonly disabled?: boolean
 }
-
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 const Action = ({
   action,
   secondary = false,

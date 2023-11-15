@@ -111,8 +111,7 @@ const WithTooltip = ({
   )
 
 /**
- * {@link https://cultureamp.design/components/guidance-block/ Guidance} |
- * {@link https://cultureamp.design/storybook/?path=/docs/components-guidance-block--default-story Storybook}
+ * @deprecated Please use the same component from `@kaizen/components`
  */
 class GuidanceBlock extends React.Component<
   GuidanceBlockProps,

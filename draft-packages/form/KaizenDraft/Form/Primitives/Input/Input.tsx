@@ -51,6 +51,9 @@ export interface InputProps
   automationId?: string
 }
 
+/**
+ * @deprecated Please use the same component from `@kaizen/components`
+ */
 export const Input = ({
   inputRef,
   status = "default",
