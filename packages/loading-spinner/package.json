@@ -1,6 +1,6 @@
 {
   "name": "@kaizen/loading-spinner",
-  "version": "2.3.11",
+  "version": "2.3.12",
   "description": "The loading-spinner component",
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",

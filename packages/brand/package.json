@@ -1,6 +1,6 @@
 {
   "name": "@kaizen/brand",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "The brand component",
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",

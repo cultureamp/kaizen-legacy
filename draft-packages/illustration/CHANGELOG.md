@@ -1,5 +1,15 @@
 # Change Log
 
+## 7.0.2
+
+### Patch Changes
+
+- [#26](https://github.com/cultureamp/kaizen-legacy/pull/26) [`85d6981`](https://github.com/cultureamp/kaizen-legacy/commit/85d6981f43a99260183170542d6cee943d161402) - Deprecated in favour of `@kaizen/components`
+
+- Updated dependencies [[`85d6981`](https://github.com/cultureamp/kaizen-legacy/commit/85d6981f43a99260183170542d6cee943d161402)]:
+  - @kaizen/component-library@16.10.1
+  - @kaizen/button@3.0.6
+
 ## 7.0.1
 
 ### Patch Changes

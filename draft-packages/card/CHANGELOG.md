@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.2.12
+
+### Patch Changes
+
+- [#26](https://github.com/cultureamp/kaizen-legacy/pull/26) [`85d6981`](https://github.com/cultureamp/kaizen-legacy/commit/85d6981f43a99260183170542d6cee943d161402) - Deprecated in favour of `@kaizen/components`
+
 ## 3.2.11
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@kaizen/typography",
-  "version": "2.3.11",
+  "version": "2.3.12",
   "description": "Collection of Kaizen typography components",
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",
