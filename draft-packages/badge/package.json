@@ -1,6 +1,6 @@
 {
   "name": "@kaizen/draft-badge",
-  "version": "1.13.12",
+  "version": "1.13.13",
   "description": "The draft badge component",
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",

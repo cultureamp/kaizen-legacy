@@ -1,6 +1,6 @@
 {
   "name": "@kaizen/draft-page-layout",
-  "version": "2.3.13",
+  "version": "2.3.14",
   "description": "The draft content block component",
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "@kaizen/component-base": "^1.1.7",
-    "@kaizen/draft-card": "^3.2.11",
+    "@kaizen/draft-card": "^3.2.12",
     "classnames": "^2.3.2",
     "resize-observer-polyfill": "^1.5.1"
   },

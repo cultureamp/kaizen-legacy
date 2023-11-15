@@ -1,5 +1,23 @@
 # Change Log
 
+## 6.21.1
+
+### Patch Changes
+
+- [#26](https://github.com/cultureamp/kaizen-legacy/pull/26) [`85d6981`](https://github.com/cultureamp/kaizen-legacy/commit/85d6981f43a99260183170542d6cee943d161402) - Deprecated in favour of `@kaizen/components`
+
+- Updated dependencies [[`85d6981`](https://github.com/cultureamp/kaizen-legacy/commit/85d6981f43a99260183170542d6cee943d161402)]:
+  - @kaizen/component-library@16.10.1
+  - @kaizen/loading-skeleton@2.0.8
+  - @kaizen/draft-divider@2.2.12
+  - @kaizen/draft-tooltip@5.4.48
+  - @kaizen/draft-badge@1.13.13
+  - @kaizen/draft-form@10.5.2
+  - @kaizen/draft-menu@5.1.1
+  - @kaizen/typography@2.3.12
+  - @kaizen/button@3.0.6
+  - @kaizen/a11y@1.7.13
+
 ## 6.21.0
 
 ### Minor Changes
