@@ -1,5 +1,9 @@
 # Kaizen Legacy
 
+⚠️ Please use `@kaizen/components` where possible. These are no longer maintained.
+
+---
+
 This repo serves as a holding ground for all our existing packages that support the legacy versions of React 16/17.
 
 We are currently in the process of migrating all components available in this repo to our new architecture.
