@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#53](https://github.com/cultureamp/kaizen-legacy/pull/53) [`182b9d6`](https://github.com/cultureamp/kaizen-legacy/commit/182b9d6c00c3576771ca72e63a146aecfb92970b) - Pass aria-describedby into RTE when sent via props
+
 ## 3.0.1
 
 ### Patch Changes
