@@ -66,6 +66,7 @@ export const RichTextEditor = (props: RichTextEditorProps): JSX.Element => {
     defaultValue,
     labelText,
     "aria-labelledby": labelledBy,
+    "aria-describedby": describedBy,
     classNameOverride,
     controls,
     rows = 3,
@@ -128,7 +129,11 @@ export const RichTextEditor = (props: RichTextEditorProps): JSX.Element => {
     : ""
   const descriptionAria = description ? `${editorId}-rte-description` : ""
 
-  const ariaDescribedBy = `${validationMessageAria} ${descriptionAria}`
+  const ariaDescribedBy = classnames(
+    validationMessageAria,
+    descriptionAria,
+    describedBy
+  )
 
   return (
     <>
