@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.3
+
+### Patch Changes
+
+- [#55](https://github.com/cultureamp/kaizen-legacy/pull/55) [`c522def`](https://github.com/cultureamp/kaizen-legacy/commit/c522def046464a392f50859667689c0fe00cea58) - aria-describedby put on textbox element instead of container div
+
 ## 3.0.2
 
 ### Patch Changes
