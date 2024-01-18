@@ -64,8 +64,8 @@ export const Select = React.forwardRef<any, SelectProps>((props, ref) => {
     props.fullWidth != null
       ? props.fullWidth
       : variant === "secondary" || variant === "secondary-small"
-      ? false
-      : true
+        ? false
+        : true
 
   const classes = classnames(
     props.className,

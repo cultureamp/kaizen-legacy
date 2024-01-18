@@ -1,11 +1,10 @@
-import React from "react"
-import { Selection } from "@react-types/shared"
-import { ItemType } from "../../../types"
+import type { Key, Selection } from "@react-types/shared"
+import type { ItemType } from "../../../types"
 
 export const getSelectedOptionKeys = (
   keys?: Selection,
   items?: ItemType[]
-): React.Key[] => {
+): Key[] => {
   if (!keys || !items) {
     return []
   }

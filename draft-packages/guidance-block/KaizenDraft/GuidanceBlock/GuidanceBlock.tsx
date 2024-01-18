@@ -270,8 +270,8 @@ class GuidanceBlock extends React.Component<
               isMobile || componentIsMobile
                 ? 0
                 : this.props.layout === "default"
-                ? 0.5
-                : 0
+                  ? 0.5
+                  : 0
             }
           >
             <div

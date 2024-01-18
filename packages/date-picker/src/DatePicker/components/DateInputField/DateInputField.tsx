@@ -1,5 +1,6 @@
 import React from "react"
 import classnames from "classnames"
+import type { Locale } from "date-fns"
 import { FieldMessage, FieldMessageStatus } from "@kaizen/draft-form"
 import {
   DateInputWithIconButton,

@@ -1,4 +1,4 @@
-import { enAU, enUS } from "date-fns/locale"
+import { Locale, enAU, enUS } from "date-fns/locale"
 import { SupportedLocales } from "../types"
 
 export const getLocale = (locale: SupportedLocales): Locale => {

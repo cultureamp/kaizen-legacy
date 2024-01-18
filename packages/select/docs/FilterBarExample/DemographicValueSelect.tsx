@@ -1,5 +1,5 @@
-import React, { Key, useEffect, useState } from "react"
-import { Selection } from "@react-types/shared"
+import React, { useEffect, useState } from "react"
+import type { Key, Selection } from "@react-types/shared"
 import {
   FilterMultiSelect,
   getSelectedOptionKeys,
@@ -14,7 +14,7 @@ import {
 export interface DemograhicValueSelectProps {
   label: string
   onRemove: () => void
-  onSelectionChange: (selectedKeys: React.Key[]) => void
+  onSelectionChange: (selectedKeys: Key[]) => void
   id: string
   selectedKeys: Set<Key>
 }
