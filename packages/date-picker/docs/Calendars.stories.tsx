@@ -132,32 +132,34 @@ const StickerSheetTemplate: StoryFn = () => (
 const applyStickerSheetStyles = (canvasElement: HTMLElement): void => {
   const canvas = within(canvasElement)
 
-  const getElementWithinCalendar = (id: string, name: string): HTMLElement => {
+  const getElementWithinCalendar = (
+    id: string,
+    role: string,
+    name: string
+  ): HTMLElement => {
     const calendar = canvas.getByTestId(id)
-    return within(calendar).getByRole("button", {
-      name,
-    })
+    return within(calendar).getByRole(role, { name })
   }
 
   const todayCalendarIds = ["today-default", "today-selected", "today-disabled"]
 
   todayCalendarIds.forEach(id => {
-    getElementWithinCalendar(id, "1st May (Sunday)").classList.add(
+    getElementWithinCalendar(id, "gridcell", "1").classList.add(
       styles.dayToday
     )
   })
 
   const calendars = [
-    { row: "default", buttonDescription: "5th September (Sunday)" },
-    { row: "selected", buttonDescription: "5th September (Sunday)" },
-    { row: "navigation", buttonDescription: "Go to previous month" },
+    { row: "default", role: "gridcell", name: "5" },
+    { row: "selected", role: "gridcell", name: "5" },
+    { row: "navigation", role: "button", name: "Go to previous month" },
   ]
 
-  calendars.forEach(({ row, buttonDescription }) => {
-    getElementWithinCalendar(`${row}-hover`, buttonDescription).classList.add(
+  calendars.forEach(({ row, role, name }) => {
+    getElementWithinCalendar(`${row}-hover`, role, name).classList.add(
       "story__datepicker__calendar--hover"
     )
-    getElementWithinCalendar(`${row}-focus`, buttonDescription).classList.add(
+    getElementWithinCalendar(`${row}-focus`, role, name).classList.add(
       "story__datepicker__calendar--focus"
     )
   })
