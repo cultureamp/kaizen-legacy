@@ -5,7 +5,7 @@
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig.dist.json",
     "build": "yarn clean && yarn prepublishOnly",
-    "clean": "rimraf -g '**/*.d.ts' '**/*.js' '**/*.map'"
+    "clean": "rimraf -g 'src/**/*.d.ts' 'src/**/*.js' 'src/**/*.map' 'index.d.ts' 'index.js' 'index.js.map'"
   },
   "repository": {
     "type": "git",
