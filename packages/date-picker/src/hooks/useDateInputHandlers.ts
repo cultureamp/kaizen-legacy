@@ -1,4 +1,5 @@
 import { Dispatch } from "react"
+import type { Locale } from "date-fns"
 import { DateInputProps } from "../_subcomponents/DateInput"
 import { DisabledDays } from "../types"
 import { formatDateAsNumeral } from "../utils/formatDateAsNumeral"

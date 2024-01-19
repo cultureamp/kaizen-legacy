@@ -34,10 +34,13 @@
     "ci:version": "yarn turbo build && yarn changeset version",
     "ci:publish": "yarn turbo build && yarn changeset publish"
   },
+  "dependenciesComments": {
+    "@kaizen/components": "Version locked as attempt to upgrade to 1.39.2 causes build errors"
+  },
   "dependencies": {
-    "@kaizen/components": "^1.21.0",
-    "@kaizen/design-tokens": "^10.3.11",
-    "@kaizen/tailwind": "1.0.5",
+    "@kaizen/components": "1.21.0",
+    "@kaizen/design-tokens": "^10.3.17",
+    "@kaizen/tailwind": "1.2.3",
     "@storybook/addons": "^7.2.1",
     "@storybook/api": "^7.2.1",
     "@storybook/blocks": "^7.2.1",

@@ -233,8 +233,8 @@ const getOwnerDocument = <T extends HTMLElement = HTMLElement>(
   element && element.ownerDocument
     ? element.ownerDocument
     : canUseDOM()
-    ? document
-    : null
+      ? document
+      : null
 
 /**
  * Check if the DOM exists and is usable

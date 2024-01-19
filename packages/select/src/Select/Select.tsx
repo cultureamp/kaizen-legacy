@@ -5,7 +5,7 @@ import {
   useSelectState,
   SelectProps as AriaSelectProps,
 } from "@react-stately/select"
-import { Node, CollectionChildren } from "@react-types/shared"
+import { Node, CollectionChildren, Key } from "@react-types/shared"
 import classnames from "classnames"
 import { v4 } from "uuid"
 import { OverrideClassName } from "@kaizen/component-base"
@@ -37,7 +37,7 @@ export interface SelectProps
     Omit<AriaSelectProps<SingleItemType>, "children" | "disabledKeys">
   > {
   /** The item keys that are disabled. These items cannot be selected, focused, or otherwise interacted with. */
-  disabledValues?: React.Key[]
+  disabledValues?: Key[]
   /**
    * Use the `fullWidth` styles.
    */

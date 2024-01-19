@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Selection } from "@react-types/shared"
+import { Key, Selection } from "@react-types/shared"
 import { Decorator, Meta, StoryFn } from "@storybook/react"
 import {
   QueryClientProvider,
@@ -538,7 +538,7 @@ export const FilterBarDemo = (): JSX.Element => {
   }
 
   const [selectedDemographicValues, setSelectedDemographicValues] = useState<{
-    [demographicId: string]: React.Key[]
+    [demographicId: string]: Key[]
   }>({})
 
   return (

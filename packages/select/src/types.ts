@@ -1,7 +1,7 @@
 import { SelectState } from "@react-stately/select"
-import { Node } from "@react-types/shared"
+import { Key, Node } from "@react-types/shared"
 
-export type ValueType = React.Key
+export type ValueType = Key
 
 export interface ItemType {
   label: string
