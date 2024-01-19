@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.3.4
+
+### Patch Changes
+
+- [#57](https://github.com/cultureamp/kaizen-legacy/pull/57) [`dccc96bccd36534df7969279e3419b4e6b5a2abb`](https://github.com/cultureamp/kaizen-legacy/commit/dccc96bccd36534df7969279e3419b4e6b5a2abb) - Update dependencies `react-day-picker` and `date-fns`.
+  Add missing `Locale` type imports.
+
 ## 6.3.3
 
 ### Patch Changes

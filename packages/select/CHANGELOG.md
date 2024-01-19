@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.21.2
+
+### Patch Changes
+
+- [#57](https://github.com/cultureamp/kaizen-legacy/pull/57) [`dccc96bccd36534df7969279e3419b4e6b5a2abb`](https://github.com/cultureamp/kaizen-legacy/commit/dccc96bccd36534df7969279e3419b4e6b5a2abb) - Fix `Key` type.
+
 ## 6.21.1
 
 ### Patch Changes
