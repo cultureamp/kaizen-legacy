@@ -157,7 +157,11 @@ import dissatisfied from "../icons/face-dissatisfied.icon.svg"
 import neutral from "../icons/face-neutral.icon.svg"
 import veryDissatisfied from "../icons/face-very-dissatisfied.icon.svg"
 import thumbsUp from "../icons/thumbs-up.icon.svg"
+import thumbsUpOff from "../icons/thumbs-up-off.icon.svg"
+import thumbsUpOn from "../icons/thumbs-up-on.icon.svg"
 import thumbsDown from "../icons/thumbs-down.icon.svg"
+import thumbsDownOff from "../icons/thumbs-down-off.icon.svg"
+import thumbsDownOn from "../icons/thumbs-down-on.icon.svg"
 
 // PERFORMANCE
 import leaderBoard from "../icons/leaderboard.icon.svg"
@@ -352,7 +356,11 @@ export const Sentiment = {
   neutral,
   veryDissatisfied,
   thumbsUp,
+  thumbsUpOff,
+  thumbsUpOn,
   thumbsDown,
+  thumbsDownOff,
+  thumbsDownOn,
 }
 
 export const Performance = {
