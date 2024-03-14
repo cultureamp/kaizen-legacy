@@ -1,5 +1,11 @@
 # Change Log
 
+## 16.11.0
+
+### Minor Changes
+
+- [#60](https://github.com/cultureamp/kaizen-legacy/pull/60) [`4f41375a299b169741a83efeffc0ea591cac9b6c`](https://github.com/cultureamp/kaizen-legacy/commit/4f41375a299b169741a83efeffc0ea591cac9b6c) - feat: add thumbs-up/thumbs-down icons.
+
 ## 16.10.1
 
 ### Patch Changes
