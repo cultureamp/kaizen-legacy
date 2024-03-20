@@ -2,4 +2,4 @@
 "@kaizen/tabs": minor
 ---
 
-fix: add classNameOverride to Tabs
+feat: add classNameOverride to Tabs
