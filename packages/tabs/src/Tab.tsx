@@ -1,10 +1,16 @@
-import React, { ReactNode, useState, SyntheticEvent } from "react"
+import React, {
+  HTMLAttributes,
+  ReactNode,
+  useState,
+  SyntheticEvent,
+} from "react"
 import { Tab as ReachTab } from "@reach/tabs"
 import classnames from "classnames"
+import { OverrideClassName } from "@kaizen/component-base"
 import { Badge } from "@kaizen/draft-badge"
 import styles from "./Tab.module.scss"
 
-export interface TabProps {
+export type TabProps = {
   /**
    * Gets injected by TabList, no need to specify yourself
    */
@@ -18,13 +24,26 @@ export interface TabProps {
   children: ReactNode
   onBlur?: (e: SyntheticEvent) => void
   onFocus?: (e: SyntheticEvent) => void
-}
+} & OverrideClassName<
+  Omit<
+    HTMLAttributes<HTMLButtonElement>,
+    // These props are used in the component internals, but could be extended if needed
+    "onFocus" | "onBlur" | "onMouseEnter" | "onMouseLeave"
+  >
+>
 
 /**
  * @deprecated Please use the same component from `@kaizen/components`
  */
 export const Tab = (props: TabProps): JSX.Element => {
-  const { isSelected, badge, disabled, children } = props
+  const {
+    isSelected,
+    badge,
+    disabled,
+    children,
+    classNameOverride,
+    ...restProps
+  } = props
   const [isHovered, setIsHovered] = useState<boolean>(false)
   const [isFocused, setIsFocused] = useState<boolean>(false)
   const showActiveBadge = isSelected || isHovered || isFocused
@@ -42,11 +61,16 @@ export const Tab = (props: TabProps): JSX.Element => {
   return (
     <ReachTab
       disabled={disabled}
-      className={classnames(styles.tab, isSelected && styles.selected)}
+      className={classnames(
+        styles.tab,
+        classNameOverride,
+        isSelected && styles.selected
+      )}
       onFocus={onFocus}
       onBlur={onBlur}
       onMouseEnter={(): void => setIsHovered(true)}
       onMouseLeave={(): void => setIsHovered(false)}
+      {...restProps}
     >
       {children}
       {badge && (
