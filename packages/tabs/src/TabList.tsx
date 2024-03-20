@@ -1,9 +1,10 @@
-import React, { ReactNode } from "react"
+import React, { HTMLAttributes, ReactNode } from "react"
 import { TabList as ReachTabList } from "@reach/tabs"
 import classnames from "classnames"
+import { OverrideClassName } from "@kaizen/component-base"
 import styles from "./TabList.module.scss"
 
-export interface TabListProps {
+export type TabListProps = {
   /**
    * Accessible name for the set of tabs
    */
@@ -13,17 +14,28 @@ export interface TabListProps {
    */
   noPadding?: boolean
   children: ReactNode
-}
+} & OverrideClassName<HTMLAttributes<HTMLDivElement>>
 
 /**
  * @deprecated Please use the same component from `@kaizen/components`
  */
 export const TabList = (props: TabListProps): JSX.Element => {
-  const { "aria-label": ariaLabel, noPadding = false, children } = props
+  const {
+    "aria-label": ariaLabel,
+    noPadding = false,
+    children,
+    classNameOverride,
+    ...restProps
+  } = props
   return (
     <ReachTabList
       aria-label={ariaLabel}
-      className={classnames(styles.tabList, noPadding && styles.noPadding)}
+      className={classnames(
+        styles.tabList,
+        classNameOverride,
+        noPadding && styles.noPadding
+      )}
+      {...restProps}
     >
       {children}
     </ReachTabList>

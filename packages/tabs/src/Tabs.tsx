@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react"
+import React, { HTMLAttributes, ReactNode } from "react"
 import { Tabs as ReachTabs, TabsKeyboardActivation } from "@reach/tabs"
 
-export interface TabsProps {
+export type TabsProps = {
   /**
    * Index of tab to show by default
    * Only works in uncontrolled mode (when no selectedIndex is provided)
@@ -23,7 +23,7 @@ export interface TabsProps {
    */
   onChange?: (index: number) => void
   children: ReactNode
-}
+} & Omit<HTMLAttributes<HTMLDivElement>, "onChange">
 
 /**
  * @deprecated Please use the same component from `@kaizen/components`
@@ -35,6 +35,7 @@ export const Tabs = (props: TabsProps): JSX.Element => {
     keyboardActivation = "auto",
     onChange,
     children,
+    ...restProps
   } = props
   return (
     <ReachTabs
@@ -46,6 +47,7 @@ export const Tabs = (props: TabsProps): JSX.Element => {
           : TabsKeyboardActivation.Manual
       }
       onChange={onChange}
+      {...restProps}
     >
       {children}
     </ReachTabs>
