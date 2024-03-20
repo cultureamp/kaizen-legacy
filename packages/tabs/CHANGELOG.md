@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.6.0
+
+### Minor Changes
+
+- [#62](https://github.com/cultureamp/kaizen-legacy/pull/62) [`199f498098f2d9be2fc2cc1af2ca086c41bf8a2b`](https://github.com/cultureamp/kaizen-legacy/commit/199f498098f2d9be2fc2cc1af2ca086c41bf8a2b) - feat: add classNameOverride to Tabs
+
 ## 1.5.47
 
 ### Patch Changes
