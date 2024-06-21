@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.11.0
+
+### Minor Changes
+
+- [#64](https://github.com/cultureamp/kaizen-legacy/pull/64) [`013bd5b4069c10b3e3dc6ec0fed52ea51368bd38`](https://github.com/cultureamp/kaizen-legacy/commit/013bd5b4069c10b3e3dc6ec0fed52ea51368bd38) - Update TitleBlockZen title font to match composable header.
+
 ## 7.10.15
 
 ### Patch Changes
