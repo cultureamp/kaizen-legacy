@@ -13,7 +13,7 @@ Happy linting! 💖
 */
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "editor.formatOnSave": true,
   "javascript.suggestionActions.enabled": false,
