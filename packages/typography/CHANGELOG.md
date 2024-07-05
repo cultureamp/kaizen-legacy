@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.4.0
+
+### Minor Changes
+
+- [#66](https://github.com/cultureamp/kaizen-legacy/pull/66) [`edbf2784262cdf6b09d5d9b44a66c7c78ff01f51`](https://github.com/cultureamp/kaizen-legacy/commit/edbf2784262cdf6b09d5d9b44a66c7c78ff01f51) - Add `composable-header-title` variant to `Heading`.
+
 ## 2.3.12
 
 ### Patch Changes
