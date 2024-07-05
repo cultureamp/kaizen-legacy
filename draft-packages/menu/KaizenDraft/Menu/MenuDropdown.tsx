@@ -74,6 +74,12 @@ export const MenuDropdown = ({
     hideMenuDropdown()
   }, [hideMenuDropdown])
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>): void => {
+    if (event.key === "Escape") {
+      hideMenuDropdown()
+    }
+  }
+
   const handleRootClick = (): void => {
     if (autoHide === "on") {
       // ie. is not equal to "off" | "outside-click-only"
@@ -107,8 +113,7 @@ export const MenuDropdown = ({
 
   return (
     // Disabling these because we don't want this to be keyboard focusable.
-    // Esc keypress should be used instead for the same behaviour (hasn't been implemented here yet)
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
       id={id}
       ref={setPopperElement}
@@ -119,6 +124,7 @@ export const MenuDropdown = ({
         width == "default" && styles.defaultWidth
       )}
       onClick={handleRootClick}
+      onKeyDown={handleKeyDown}
     >
       {children}
     </div>
