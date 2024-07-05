@@ -97,6 +97,11 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
             Let&apos;s create a better world of work
           </Heading>
         </StoryWrapper.Row>
+        <StoryWrapper.Row rowTitle="Composable header title">
+          <Heading variant="composable-header-title" color={fontColour}>
+            Use me in the composable header!
+          </Heading>
+        </StoryWrapper.Row>
         <StoryWrapper.Row rowTitle="Heading 1">
           <div>
             <Heading variant="heading-1" color={fontColour}>

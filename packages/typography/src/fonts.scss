@@ -9,6 +9,13 @@
   font-weight: 800;
 }
 
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url(asset-url("fonts/tiempos/tiempos-headline-medium.woff2")),
+    url(asset-url("fonts/tiempos/tiempos-headline-medium.woff"));
+  font-weight: 500;
+}
+
 // =============== GREYCLIFF ===============
 
 @font-face {
