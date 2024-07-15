@@ -43,13 +43,11 @@ const StickerSheetTemplate: StoryFn<{ isReversed: boolean }> = ({
       <Brand alt="Culture Amp" variant="enso" reversed={isReversed} />
     </StoryWrapper.Row>
     <StoryWrapper.Row rowTitle="Collective Intelligence">
-      <div style={{ width: "200px" }}>
-        <Brand
-          alt="Collective Intelligence"
-          variant="collective-intelligence"
-          reversed={isReversed}
-        />
-      </div>
+      <Brand
+        alt="Collective Intelligence"
+        variant="collective-intelligence"
+        reversed={isReversed}
+      />
     </StoryWrapper.Row>
   </StoryWrapper>
 )
