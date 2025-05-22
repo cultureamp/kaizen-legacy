@@ -35,7 +35,7 @@ jobs:
       - uses: ./.github/actions/setup
       - run: yarn storybook:build --webpack-stats-json
       - name: Upload Storybook build as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: "./storybook/public"
@@ -101,7 +101,7 @@ jobs:
           fetch-depth: 0
       - name: Download Storybook build artifact
         id: download
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: "./storybook/public"

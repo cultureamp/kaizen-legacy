@@ -24,6 +24,7 @@ runs:
       with:
         path: ./node_modules
         key: kaizen-${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('./yarn.lock') }}
+
     - name: yarn install
       shell: bash
       env:
@@ -31,6 +32,11 @@ runs:
       run: |
         npm config set "//npm.pkg.github.com/:_authToken" "$GITHUB_TOKEN"
         yarn install --frozen-lockfile
+    
+    - name: Install Playwright
+      shell: bash
+      run: |
+        npx playwright install
 
     # setup turborepo cache
     - uses: dtinth/setup-github-actions-caching-for-turbo@v1
